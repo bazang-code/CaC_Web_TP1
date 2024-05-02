@@ -8,48 +8,68 @@ html {
 }
 
 body, header, main, footer {
-    background-color: rgb(127, 240, 255);
+    background-color: #bdd6d2;
     margin: 1.5rem;
     min-width: 1100px;
     border: 3px green solid;
 }
-nav ul {
-    list-style-type: none;
 
-    display: flex;
+header nav img {
+    margin-left: 10px;
+    margin-top: 0px;
 }
+
+#logo_marco {
+    position: relative;
+    overflow: hidden;
+    top: 5px;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header nav ul {
+    display: flex;
+    list-style: none;
+}
+
+header nav ul li {
+    margin-left: 10px;
+}
+
 
 .nav_actual {
     font-size: 10pt;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    background-color: rgb(127, 240, 255);
-    color: rgb(0, 0, 255);
+    background-color: #f6eddc;
+    color: #153448;
     text-decoration: none;
-    padding: 9px;
-    border-radius: 5px;
+    padding: 10px;
+    border-radius: 25px;
     margin: 3px;
     border-color: gray;
-    border-style: double;
+    border-style: solid;
 }
 
 .nav {
     font-size: 10pt;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    background-color: rgb(214, 127, 255);
-    color: blue;
+    background-color: #e3e5d7;
+    color: #153448;
     text-decoration: none;
     padding: 10px;
-    border-radius: 5px;
+    border-radius: 20px;
     margin: 3px;
-
-    position: sticky;
     z-index: 999;
-    box-shadow: 0 5px 5px rgb(127, 168, 255);
+    box-shadow: 0 5px 5px #586875;
 }
 
 .nav:hover {
     opacity: 1;
-    background-color: rgb(226, 110, 154);
+    background-color: #a5c8ca;
 }
 
 
@@ -62,23 +82,16 @@ footer {
     min-height: 10vh;
 }
 
-#logo_marco {
-    position: relative;
-    overflow: hidden;
-    width: 50px;
-    height: 50px;
-
-    top: 20px;
-    
-}
 
 
-h1 {
-    background-color: rgb(127, 208, 255);
+header h1 {
+    background-color: #e3e5d7;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-top: 15px;
     padding: 10px;
-    border-radius: 5px;
+    border-radius: 35px;
     border: 2px;
+    text-align: center;
 }
 
 a {
