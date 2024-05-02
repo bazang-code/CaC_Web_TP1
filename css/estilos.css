@@ -9,20 +9,25 @@ html {
 
 body, header, main, footer {
     background-color: #bdd6d2;
-    margin: 1.5rem;
-    min-width: 1100px;
+    margin: 1rem;
+    min-width: 1000px;
     border: 3px green solid;
 }
 
-header nav img {
+/* header nav img {
     margin-left: 10px;
     margin-top: 0px;
-}
+    max-width: 100%;
+    height: auto;
+} */
 
 #logo_marco {
     position: relative;
     overflow: hidden;
     top: 5px;
+    max-width: 100%;
+    height: auto;
+    width: 4%;
 }
 
 header nav {
@@ -38,6 +43,8 @@ header nav ul {
 
 header nav ul li {
     margin-left: 10px;
+    /* display: inline; */
+    display: inline-flex;
 }
 
 
@@ -134,6 +141,23 @@ blockquote p::after {
     content: '\201D';
     }
         
+
+/* Media queries para hacer el sitio responsive */
+@media screen and (max-width: 768px) {
+    #logo_marco {
+        width: 10%;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin-bottom: 10px;
+    }
+}
 
 
 /* PRUEBA DE ESPECIFICIDADES -> Pesos de menor a mayor: Universales; Etiquetas; Clase; Id; Estilos en linea */
