@@ -123,34 +123,40 @@ footer {
 }
 
 footer .redes {
-    font-size: 2em;
-    margin: 15px;
+    font-size: 2rem;
+    display: inline-block;
+    margin-right: 10px;
+    align-content: center;
 }
 
 footer .redes i {
-    color: rgb(44, 94, 8);
+    color: black;
     transition: 1.5s;
+    width: 30px;
+    background-color: #bdd6d2;
+    border: solid;
+    font-size: x-large;
 }
 
 footer .redes i:hover {
-    color: rgb(165, 241, 121);
+    /*color: rgb(165, 241, 121);*/
+    color: #ff0000;
 }
+
 
 blockquote {
     background: #eee;
     border-radius: 35px;
-    margin: 32px 0;
-    align-content: center;
-    
+    margin: 20px 0;
     }
 
 blockquote p {
-    padding: 25px;
+    padding: 15px;
     }
 
-cite {
+/* cite {
     margin: 16px 32px;
-    }
+    } */
 
 blockquote p::before {
     content: '\201C';

@@ -1,0 +1,43 @@
+footer .redes {
+    font-size: 2rem;
+    display: inline-block;
+    margin-right: 10px;
+    align-content: center;
+}
+
+footer .redes i {
+    color: black;
+    transition: 1.5s;
+    width: 30px;
+    background-color: #bdd6d2;
+    border: solid;
+    font-size: x-large;
+}
+
+footer .redes i:hover {
+    /*color: rgb(165, 241, 121);*/
+    color: #ff0000;
+}
+
+
+blockquote {
+    background: #eee;
+    border-radius: 35px;
+    margin: 20px 0;
+    }
+
+blockquote p {
+    padding: 15px;
+    }
+
+/* cite {
+    margin: 16px 32px;
+    } */
+
+blockquote p::before {
+    content: '\201C';
+    }
+
+blockquote p::after {
+    content: '\201D';
+    }
