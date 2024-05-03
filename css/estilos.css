@@ -87,6 +87,24 @@ footer {
     font-weight: bold;
     text-align: center;
     min-height: 10vh;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer .redes {
+    font-size: 1.5em;
+    margin: 15px;
+}
+
+footer .redes i {
+    color: rgb(44, 94, 8);
+    transition: 1.5s;
+}
+
+footer .redes i:hover {
+    color: rgb(165, 241, 121);
 }
 
 
