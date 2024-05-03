@@ -30,6 +30,16 @@ body, header, main, footer {
     width: 4%;
 }
 
+header h1 {
+    background-color: #e3e5d7;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-top: 15px;
+    padding: 10px;
+    border-radius: 35px;
+    border: 2px;
+    text-align: center;
+}
+
 header nav {
     display: flex;
     justify-content: space-between;
@@ -80,9 +90,27 @@ header nav ul li {
 }
 
 
+a {
+    background-color: rgb(127, 168, 255); 
+    font-weight: bold;
+    font-size: 12pt;
+}
+
+p {
+    font-size: 14pt;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-size: cover;
+}
+
+li {
+    font-size: 12pt;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
 footer {
     /*background-color: rgb(0, 162, 255);*/
-    font-size: 14pt;
+    font-size: 12pt;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: bold;
     text-align: center;
@@ -91,10 +119,11 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    
 }
 
 footer .redes {
-    font-size: 1.5em;
+    font-size: 2em;
     margin: 15px;
 }
 
@@ -107,44 +136,16 @@ footer .redes i:hover {
     color: rgb(165, 241, 121);
 }
 
-
-
-header h1 {
-    background-color: #e3e5d7;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    margin-top: 15px;
-    padding: 10px;
-    border-radius: 35px;
-    border: 2px;
-    text-align: center;
-}
-
-a {
-    background-color: rgb(127, 168, 255); 
-    font-weight: bold;
-    font-size: 12pt;
-}
-
-p {
-    font-size: 16pt;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    background-size: cover;
-}
-
-li {
-    font-size: 12pt;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-
-
 blockquote {
     background: #eee;
-    border-radius: 20px;
+    border-radius: 35px;
     margin: 32px 0;
+    align-content: center;
+    
     }
 
 blockquote p {
-    padding: 30px;
+    padding: 25px;
     }
 
 cite {
