@@ -7,19 +7,13 @@ html {
     scroll-behavior: smooth;
 }
 
-body, header, main, footer {
+body, header, main {
     background-color: #bdd6d2;
     margin: 1rem;
     min-width: 1000px;
-    border: 3px green solid;
+    /* border: 3px green solid; */
 }
 
-/* header nav img {
-    margin-left: 10px;
-    margin-top: 0px;
-    max-width: 100%;
-    height: auto;
-} */
 
 #logo_marco {
     position: relative;
@@ -40,56 +34,6 @@ header h1 {
     text-align: center;
 }
 
-header nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-header nav ul {
-    display: flex;
-    list-style: none;
-}
-
-header nav ul li {
-    margin-left: 10px;
-    /* display: inline; */
-    display: inline-flex;
-}
-
-
-.nav_actual {
-    font-size: 10pt;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    background-color: #f6eddc;
-    color: #153448;
-    text-decoration: none;
-    padding: 10px;
-    border-radius: 25px;
-    margin: 3px;
-    border-color: gray;
-    border-style: solid;
-}
-
-.nav {
-    font-size: 10pt;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    background-color: #e3e5d7;
-    color: #153448;
-    text-decoration: none;
-    padding: 10px;
-    border-radius: 20px;
-    margin: 3px;
-    z-index: 999;
-    box-shadow: 0 5px 5px #586875;
-}
-
-.nav:hover {
-    opacity: 1;
-    background-color: #a5c8ca;
-}
-
-
 a {
     background-color: rgb(127, 168, 255); 
     font-weight: bold;
@@ -97,7 +41,7 @@ a {
 }
 
 p {
-    font-size: 14pt;
+    font-size: 12pt;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     background-size: cover;
 }
@@ -106,69 +50,10 @@ li {
     font-size: 12pt;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-
-
-footer {
-    /*background-color: rgb(0, 162, 255);*/
-    font-size: 12pt;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-weight: bold;
-    text-align: center;
-    min-height: 10vh;
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    
-}
-
-footer .redes {
-    font-size: 2rem;
-    display: inline-block;
-    margin-right: 10px;
-    align-content: center;
-}
-
-footer .redes i {
-    color: black;
-    transition: 1.5s;
-    width: 30px;
-    background-color: #bdd6d2;
-    border: solid;
-    font-size: x-large;
-}
-
-footer .redes i:hover {
-    /*color: rgb(165, 241, 121);*/
-    color: #ff0000;
-}
-
-
-blockquote {
-    background: #eee;
-    border-radius: 35px;
-    margin: 20px 0;
-    }
-
-blockquote p {
-    padding: 15px;
-    }
-
-/* cite {
-    margin: 16px 32px;
-    } */
-
-blockquote p::before {
-    content: '\201C';
-    }
-
-blockquote p::after {
-    content: '\201D';
-    }
-        
+   
 
 /* Media queries para hacer el sitio responsive */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 800px) {
     #logo_marco {
         width: 10%;
     }
@@ -184,6 +69,99 @@ blockquote p::after {
     }
 }
 
+/************************************************************************************************/
+
+.sumario {
+    flex-grow: 1;
+    flex-basis: 100%; 
+    padding: 20px;
+    margin: 20px;
+}
+
+div.row{
+    /* padding: 10px; */
+    /* border: 1px solid red; */
+    /* background-color: rgba(255,0,0,0.15); */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    text-align: center;
+    padding: 10px;
+}
+div.col{
+    /* padding: 10px;
+    border: 1px solid blue;
+    background-color: rgba(0,0,255,0.15); */
+    /* flex-grow: 1; */
+    flex-basis: 100%; 
+    padding: 10px;
+    border: solid grey;
+    border-radius: 15px;
+    margin: 5px;
+}
+
+div.col:hover {
+    opacity: 1;
+    background-color: #8ec6c9;
+}
+
+.enlace-sin-hipervinculo {
+    text-decoration: none; /* Elimina la decoración de enlace */
+    color: #000; /* Color del texto */
+    cursor: default; /* Cambia el cursor a predeterminado para indicar que no es un enlace */
+}
+
+/************************************************************************************************/
+.carrusel-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh; /* O ajusta la altura según sea necesario */
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+#carrusel_home {
+    height: 300px;
+    margin-bottom: 20px;
+    background-color: #f0f0f0;
+}
+
+.carousel-caption h3 {
+    color: white; /* Cambia el color del texto del título */
+    font: bold;
+    text-shadow: -1px -1px 0 #ccc, 1px -1px 0 #ccc, -1px 1px 0 #ccc, 1px 1px 0 #ccc; /* Borde de letra gris */
+}
+
+.carousel-caption p {
+    color: #fff; /* Cambia el color del texto del párrafo */
+}
+
+.carousel-item {
+    width: 100%; /* Ancho del contenedor al 100% */
+    max-height: 500px; /* Altura máxima del contenedor */
+    overflow: hidden; /* Oculta el contenido que excede la altura máxima */
+}
+
+.carousel-item img {
+    width: auto;
+    height: 350px;
+}
+
+.carousel-control-prev, .carousel-control-next {
+    background: transparent; /* Fondo transparente para las flechas */
+    border: none; /* Borra el borde de las flechas */
+}
+
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    background-color: transparent; /* Color de fondo transparente para las flechas */
+    color: #000; /* Color de las flechas (negro en este caso) */
+    border: none; /* Borra el borde de las flechas */
+}
+
+.carousel-control-prev:hover, .carousel-control-next:hover {
+    background: rgba(255, 255, 255, 0.5); /* Fondo semi-transparente al pasar el cursor */
+}
+/************************************************************************************************/
 
 /* PRUEBA DE ESPECIFICIDADES -> Pesos de menor a mayor: Universales; Etiquetas; Clase; Id; Estilos en linea */
 .test {/* se llama con class dentro de la etiqueta */
