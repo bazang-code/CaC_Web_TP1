@@ -1,0 +1,27 @@
+.imagen-contenedor {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+}
+
+.articulos-contenedor{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.articulos-contenedor article {
+    flex: 1 1 calc(50% - 20px); /* Distribuye los artículos en 2 columnas y ajusta el ancho */
+    margin: 10px;
+    padding: 20px;
+    border: solid grey;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.lista-alineacion {
+    text-align: left;
+}
+@media screen and (max-width: 768px) {
+    .articulos-container article {
+        flex: 1 1 100%; /* En dispositivos pequeños, ocupa el 100% del ancho */
+    }
+}

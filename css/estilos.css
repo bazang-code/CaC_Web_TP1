@@ -7,19 +7,13 @@ html {
     scroll-behavior: smooth;
 }
 
-body, header, main, footer {
+body, header, main {
     background-color: #bdd6d2;
     margin: 1rem;
     min-width: 1000px;
-    border: 3px green solid;
+    /* border: 3px green solid; */
 }
 
-/* header nav img {
-    margin-left: 10px;
-    margin-top: 0px;
-    max-width: 100%;
-    height: auto;
-} */
 
 #logo_marco {
     position: relative;
@@ -34,7 +28,6 @@ header nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    
 }
 
 header nav ul {
@@ -73,19 +66,13 @@ header nav ul li {
     margin: 3px;
     z-index: 999;
     box-shadow: 0 5px 5px #586875;
-   
-   }
-
-nav {
-    position: sticky;
-    top: 1px;
-    z-index: 999;
 }
 
 .nav:hover {
     opacity: 1;
     background-color: #a5c8ca;
 }
+
 
 footer {
     /*background-color: rgb(0, 162, 255);*/
@@ -133,7 +120,7 @@ a {
 }
 
 p {
-    font-size: 16pt;
+    font-size: 12pt;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     background-size: cover;
 }
@@ -142,33 +129,10 @@ li {
     font-size: 12pt;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-
-
-blockquote {
-    background: #eee;
-    border-radius: 20px;
-    margin: 32px 0;
-    }
-
-blockquote p {
-    padding: 30px;
-    }
-
-cite {
-    margin: 16px 32px;
-    }
-
-blockquote p::before {
-    content: '\201C';
-    }
-
-blockquote p::after {
-    content: '\201D';
-    }
-        
+   
 
 /* Media queries para hacer el sitio responsive */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 800px) {
     #logo_marco {
         width: 10%;
     }
@@ -184,14 +148,75 @@ blockquote p::after {
     }
 }
 
+/************************************************************************************************/
 
-/* PRUEBA DE ESPECIFICIDADES -> Pesos de menor a mayor: Universales; Etiquetas; Clase; Id; Estilos en linea */
-.test {/* se llama con class dentro de la etiqueta */
-    background-color: black;
-    color: white;
-    font-family: 'Times New Roman', Times, serif;
-    font-style: italic;
-    font-weight: bold;
+.sumario {
+    flex-grow: 1;
+    flex-basis: 100%; 
+    padding: 20px;
+    margin: 20px;
+}
+
+.contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.contenedor article {
+    flex: 1 1 calc(50% - 20px); /* Distribuye los artículos en 2 columnas y ajusta el ancho */
+    margin: 10px;
+    padding: 10px;
+    border: solid grey;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.contenedor article:hover {
+    opacity: 1;
+    background-color: #8ec6c9;
+}
+
+.enlace-sin-hipervinculo {
+    text-decoration: none; /* Elimina la decoración de enlace */
+    color: #000; /* Color del texto */
+    cursor: default; /* Cambia el cursor a predeterminado para indicar que no es un enlace */
+}
+
+/************************************************************************************************/
+.carrusel-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh; /* O ajusta la altura según sea necesario */
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+#carrusel_home {
+    height: 300px;
+    margin-bottom: 20px;
+    background-color: #f0f0f0;
+}
+
+.carousel-caption h3 {
+    color: white; /* Cambia el color del texto del título */
+    font: bold;
+    text-shadow: -1px -1px 0 #ccc, 1px -1px 0 #ccc, -1px 1px 0 #ccc, 1px 1px 0 #ccc; /* Borde de letra gris */
+}
+
+.carousel-caption p {
+    color: #fff; /* Cambia el color del texto del párrafo */
+}
+
+.carousel-item {
+    width: 100%; /* Ancho del contenedor al 100% */
+    max-height: 500px; /* Altura máxima del contenedor */
+    overflow: hidden; /* Oculta el contenido que excede la altura máxima */
+}
+
+.carousel-item img {
+    width: auto;
+    height: 350px;
 }
 
 #test2 {/* se llama con id dentro de la etiqueta */
@@ -200,4 +225,26 @@ blockquote p::after {
     font-family: 'Times New Roman', Times, serif;
     font-style: italic;
     font-weight: bold;
+}
+
+.btn-wsp {
+    position: fixed;
+    width: 55px;
+    height: 55px;
+    line-height: 55px;
+    bottom: 50px;
+    right: 30px;
+    background: #0df053;
+    color: #fff;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.3);
+    z-index: 100;
+}
+
+.btn-wsp:hover {
+    text-decoration: none;
+    color: #0df053;
+    background: #fff;
 }
