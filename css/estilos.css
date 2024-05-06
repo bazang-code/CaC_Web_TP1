@@ -78,29 +78,22 @@ li {
     margin: 20px;
 }
 
-div.row{
-    /* padding: 10px; */
-    /* border: 1px solid red; */
-    /* background-color: rgba(255,0,0,0.15); */
+.contenedor {
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
-    text-align: center;
-    padding: 10px;
+    justify-content: center;
 }
-div.col{
-    /* padding: 10px;
-    border: 1px solid blue;
-    background-color: rgba(0,0,255,0.15); */
-    /* flex-grow: 1; */
-    flex-basis: 100%; 
+
+.contenedor article {
+    flex: 1 1 calc(50% - 20px); /* Distribuye los artículos en 2 columnas y ajusta el ancho */
+    margin: 10px;
     padding: 10px;
     border: solid grey;
     border-radius: 15px;
-    margin: 5px;
+    text-align: center;
 }
 
-div.col:hover {
+.contenedor article:hover {
     opacity: 1;
     background-color: #8ec6c9;
 }
@@ -162,20 +155,3 @@ div.col:hover {
     background: rgba(255, 255, 255, 0.5); /* Fondo semi-transparente al pasar el cursor */
 }
 /************************************************************************************************/
-
-/* PRUEBA DE ESPECIFICIDADES -> Pesos de menor a mayor: Universales; Etiquetas; Clase; Id; Estilos en linea */
-.test {/* se llama con class dentro de la etiqueta */
-    background-color: black;
-    color: white;
-    font-family: 'Times New Roman', Times, serif;
-    font-style: italic;
-    font-weight: bold;
-}
-
-#test2 {/* se llama con id dentro de la etiqueta */
-    background-color: white;
-    color: black;
-    font-family: 'Times New Roman', Times, serif;
-    font-style: italic;
-    font-weight: bold;
-}
