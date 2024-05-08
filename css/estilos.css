@@ -14,14 +14,20 @@ body, header, main {
     /* border: 3px green solid; */
 }
 
+#logo_contenedor {
+    width: 50px; /* Tamaño deseado para el logo */
+    height: 50px; /* Tamaño deseado para el logo */
+    background-image: url("../img/Logo_new_tech.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    
+}
 
-#logo_marco {
-    position: relative;
-    overflow: hidden;
-    top: 5px;
-    max-width: 100%;
-    height: auto;
-    width: 4%;
+#logo_link {
+    display: block;
+    text-decoration: none;
+    background-color: transparent;
 }
 
 header h1 {
