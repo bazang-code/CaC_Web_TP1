@@ -20,8 +20,3 @@
 .lista-alineacion {
     text-align: left;
 }
-@media screen and (max-width: 768px) {
-    .articulos-container article {
-        flex: 1 1 100%; /* En dispositivos pequeños, ocupa el 100% del ancho */
-    }
-}

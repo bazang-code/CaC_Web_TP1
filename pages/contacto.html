@@ -35,54 +35,56 @@
 
     
     <main>
-        <h2><p>Horario de atención: Lunes a Viernes de 9 a 20 horas. Sábado de 9 a 16 horas.
-        </h2>
-            </p>
-                <ul>
-                    <li>Servicio tecnico de pc en toda la capital federal.</li>
-                    <li>Vamos a domicilio para reparar su pc.</li>
-                    <li>Atención de urgencias.</li>
-                    <li>Instalación de sistema operativo.</li>
-                    <li>Soporte on site (en el domicilio del cliente).</li>
-                    <li>Backup de información y traspaso entre discos rígidos.</li>
-                    <li>Instalación y actualización de Software.</li>
-                    <li>Armado de equipo y PC personalizado.</li>
-                    <li>Instalación de drivers y controladores.</li>
-                    <li>Desinfección de virus.</li>
-                    <li>Instalación y mantenimiento de redes informáticas.</li>
-                    <li>Instalación, configuración y cambio de dispositivos.</li>
-                </ul>
-
+        <div>
+            <h2><p>Horario de atención: Lunes a Viernes de 9 a 20 horas. Sábado de 9 a 16 horas.
+            </h2>
+                </p>
+                    <ul>
+                        <li>Servicio tecnico de pc en toda la capital federal.</li>
+                        <li>Vamos a domicilio para reparar su pc.</li>
+                        <li>Atención de urgencias.</li>
+                        <li>Instalación de sistema operativo.</li>
+                        <li>Soporte on site (en el domicilio del cliente).</li>
+                        <li>Backup de información y traspaso entre discos rígidos.</li>
+                        <li>Instalación y actualización de Software.</li>
+                        <li>Armado de equipo y PC personalizado.</li>
+                        <li>Instalación de drivers y controladores.</li>
+                        <li>Desinfección de virus.</li>
+                        <li>Instalación y mantenimiento de redes informáticas.</li>
+                        <li>Instalación, configuración y cambio de dispositivos.</li>
+                    </ul>
+        </div>
         <!-- <img src="" alt="Contactanos" width="550" height="300" > -->
 
-        <fieldset>
-            <legend><h2 style="font-size: 18pt; font-family: Verdana, Geneva, Tahoma, sans-serif;">Contactanos</h2></legend>
-                
-            <form action="" method="POST" target="_blank">
-                <!-- Entrada de datos -->
-                <!-- En la LABEL conviene poner el FOR con el mismo nombre que tiene el INPUT en el ID -->
-            <section>
-                <label for="nombre">Nombre y Apellido: </label> <br>
-                <input size="50" type="text" name="nombre" id="nombre" maxlength="50" required placeholder="Este campo es obligatorio">
-            </section>
-            <section>
-                <label for="mail">Email: </label> <br>
-                <input size="50" type="email" name="mail" id="mail" required placeholder="Este campo es obligatorio">
-            </section>
-            <section>
-                <label for="telefono">Teléfono: </label> <br>
-                <input size="50" type="text" name="telefono" id="telefono" maxlength="15">
-            </section>
-            <sections>Consulta:</section>
-            <section>
-                <textarea name="consulta" id="" cols="48" rows="8" placeholder="Deje su consulta aqui"></textarea>
-            </section>
-                <input type="submit" value="Enviar">
-                <input type="reset" value="Borrar datos">
-    
-            </form>
-        </fieldset>
-        
+        <div class="contenedor_form">
+            <fieldset>
+                <legend>Contactanos 2</legend>
+                <form action="" method="POST" target="_blank">
+                    <!-- Entrada de datos -->
+                    <!-- En la LABEL conviene poner el FOR con el mismo nombre que tiene el INPUT en el ID -->
+                    <div class="form-group">
+                        <label for="nombre">Nombre y Apellido:</label> <br>
+                        <input class="form-control" type="text" name="nombre" id="nombre" maxlength="50" required placeholder="Ingrese su nombre completo">
+                    </div>
+                    <div class="form-group">
+                        <label for="mail">Email:</label> <br>
+                        <input class="form-control" type="email" name="mail" id="mail" required placeholder="Ingrese su correo electrónico">
+                    </div>
+                    <div class="form-group">
+                        <label for="telefono">Teléfono:</label> <br>
+                        <input class="form-control" type="text" name="telefono" id="telefono" maxlength="15" placeholder="Ingrese su número de teléfono">
+                    </div>
+                    <div class="form-group">
+                        <label for="consulta">Consulta:</label> <br>
+                        <textarea class="form-control" name="consulta" id="consulta" cols="30" rows="5" placeholder="Escriba su consulta aquí"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <input class="boton-submit" type="submit" value="Enviar">
+                        <input class="boton-reset" type="reset" value="Limpiar">
+                    </div>
+                </form>
+            </fieldset>
+        </div>
     </main>
     
     <footer>

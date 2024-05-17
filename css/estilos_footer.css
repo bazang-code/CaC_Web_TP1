@@ -5,7 +5,6 @@ footer {
     font-size: 12pt;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: bold;
-    text-align: center; /* Centra el contenido del footer horizontalmente */
     position: relative; /* Establece posición relativa para que los iconos mantengan su posición */
     min-height: 10vh;
     display: flex;
@@ -21,19 +20,17 @@ footer p {
     border-radius: 35px;
     margin-right: 5px; /* Margen a la derecha para separar los iconos */
     flex-grow: 1; /* El párrafo ocupa el espacio disponible */
-}
 
-/* footer .redes {
-    font-size: 2rem;
-    display: inline-block;
-    margin-right: 10px;
-} */
+    font-size: 10pt; 
+}
 
 footer .redes {
     position: absolute;
     top: 50%;
     right: 100px; /* Ajusta la posición de los iconos a la derecha */
     transform: translateY(-50%);
+
+    font-size: 1.5rem; 
 }
 
 footer .redes i {
@@ -48,15 +45,4 @@ footer .redes i {
 footer .redes i:hover {
     /*color: rgb(165, 241, 121);*/
     color: #ff0000;
-}
-
-/* Media queries para ajustes responsivos */
-@media screen and (max-width: 768px) {
-    footer p {
-        font-size: 10pt; /* Ajusta el tamaño del texto para pantallas más pequeñas */
-    }
-
-    footer .redes {
-        font-size: 1.5rem; /* Ajusta el tamaño de los iconos para pantallas más pequeñas */
-    }
 }

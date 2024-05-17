@@ -10,7 +10,7 @@ html {
 body, header, main {
     background-color: #bdd6d2;
     margin: 1rem;
-    min-width: 1000px;
+    min-width: 800px;
     /* border: 3px green solid; */
 }
 
@@ -57,9 +57,18 @@ li {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
    
+/************************************************************************************************/
+.contenedor_responsive {
+    width: 90%;
+    margin: 0 auto;
+}
 
-/* Media queries para hacer el sitio responsive */
-@media screen and (max-width: 800px) {
+/* Media query para dispositivos de tamaño medio (Tablets) */
+@media only screen and (max-width: 768px) {
+    .contenedor_responsive {
+        width: 80%;
+    }
+    
     #logo_marco {
         width: 10%;
     }
@@ -73,6 +82,14 @@ li {
     nav ul li {
         margin-bottom: 10px;
     }
+}
+
+/* Media query para dispositivos pequeños (Celulares) */
+@media only screen and (max-width: 480px) {
+    .contenedor_responsive {
+        width: 100%;
+    }
+    /* Otros estilos específicos para celulares si es necesario */
 }
 
 /************************************************************************************************/
