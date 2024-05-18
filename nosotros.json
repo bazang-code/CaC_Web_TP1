@@ -1,0 +1,42 @@
+{	
+	"personas": [
+        "Carlos",
+        "Maria",
+        "Jose"
+    ],
+
+    "turno": "Mañana",
+    "Comision": 24264
+}
+
+[
+    {
+        "apellido": "Bazan",
+        "nombre": "Guillermo",
+        "edad": 46,
+        "residencia": "CABA, Argentina",
+        "foto_perfil": "https://github.com/bazang-code/guillermo.jpg"
+    },
+    {
+        "apellido": "Renzo",
+        "nombre": "Marinangeli",
+        "edad": 18,
+        "residencia": "Bs As, Argentina",
+        "foto_perfil": "https://github.com/bazang-code/renzo.jpg"
+    },
+    {
+        "apellido": "Galeppi",
+        "nombre": "Yamila",
+        "edad": 18,
+        "residencia": "Bs As, Argentina",
+        "foto_perfil": "https://github.com/bazang-code/yamila.jpg"
+    },
+    {
+        "apellido": "Navarro",
+        "nombre": "Franco",
+        "edad": 18,
+        "residencia": "____, Argentina",
+        "foto_perfil": "https://github.com/bazang-code/franco.jpg"
+    }
+] 
+
