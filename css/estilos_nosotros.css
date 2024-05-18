@@ -1,0 +1,38 @@
+main {
+    min-height: 70vh;
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+}
+
+article {
+    background-color: cadetblue;
+    border-radius: 5px;
+    padding: 15px;
+    margin: 5px;
+}
+
+article img {
+    border-radius: 999px;
+    width: 100%;
+}
+article p {
+    text-align: center;
+}
+
+/* .botonera {
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+
+    background-color: red;
+    padding: 15px;
+} */
+
+#Contenedor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

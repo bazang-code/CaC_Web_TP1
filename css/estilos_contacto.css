@@ -59,7 +59,6 @@ input[type="text"], input[type="email"], textarea {
     border-radius: 5px;
     border: none;
     color: black;
-    /* font-weight: bold; */
     cursor: pointer;
 }
 

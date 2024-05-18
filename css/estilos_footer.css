@@ -10,7 +10,7 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 25px;
+    padding: 10px;
 }
 
 footer p {
@@ -46,3 +46,5 @@ footer .redes i:hover {
     /*color: rgb(165, 241, 121);*/
     color: #ff0000;
 }
+
+
