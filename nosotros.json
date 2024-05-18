@@ -1,13 +1,13 @@
-{	
-	"personas": [
-        "Carlos",
-        "Maria",
-        "Jose"
-    ],
+// {	
+// 	"personas": [
+//         "Carlos",
+//         "Maria",
+//         "Jose"
+//     ],
 
-    "turno": "Mañana",
-    "Comision": 24264
-}
+//     "turno": "Mañana",
+//     "Comision": 24264
+// }
 
 [
     {
@@ -15,28 +15,28 @@
         "nombre": "Guillermo",
         "edad": 46,
         "residencia": "CABA, Argentina",
-        "foto_perfil": "https://github.com/bazang-code/guillermo.jpg"
+        "foto_perfil": "https://github.com/bazang-code/img/guillermo.png"
     },
     {
         "apellido": "Renzo",
         "nombre": "Marinangeli",
         "edad": 18,
-        "residencia": "Bs As, Argentina",
-        "foto_perfil": "https://github.com/bazang-code/renzo.jpg"
+        "residencia": "Mar del Plata, Argentina",
+        "foto_perfil": "https://github.com/bazang-code/img/guillermo.png"
     },
     {
         "apellido": "Galeppi",
         "nombre": "Yamila",
         "edad": 18,
         "residencia": "Bs As, Argentina",
-        "foto_perfil": "https://github.com/bazang-code/yamila.jpg"
+        "foto_perfil": "https://github.com/bazang-code/img/guillermo.png"
     },
     {
         "apellido": "Navarro",
         "nombre": "Franco",
         "edad": 18,
-        "residencia": "____, Argentina",
-        "foto_perfil": "https://github.com/bazang-code/franco.jpg"
+        "residencia": "Bs As, Argentina",
+        "foto_perfil": "https://github.com/bazang-code/img/guillermo.png"
     }
 ] 
 
