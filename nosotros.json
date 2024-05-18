@@ -9,34 +9,35 @@
 //     "Comision": 24264
 // }
 
-[
-    {
-        "apellido": "Bazan",
-        "nombre": "Guillermo",
-        "edad": 46,
-        "residencia": "CABA, Argentina",
-        "foto_perfil": "https://github.com/bazang-code/img/guillermo.png"
-    },
-    {
-        "apellido": "Renzo",
-        "nombre": "Marinangeli",
-        "edad": 18,
-        "residencia": "Mar del Plata, Argentina",
-        "foto_perfil": "https://github.com/bazang-code/img/guillermo.png"
-    },
-    {
-        "apellido": "Galeppi",
-        "nombre": "Yamila",
-        "edad": 18,
-        "residencia": "Bs As, Argentina",
-        "foto_perfil": "https://github.com/bazang-code/img/guillermo.png"
-    },
-    {
-        "apellido": "Navarro",
-        "nombre": "Franco",
-        "edad": 18,
-        "residencia": "Bs As, Argentina",
-        "foto_perfil": "https://github.com/bazang-code/img/guillermo.png"
-    }
-] 
-
+{
+    "Integrantes":[
+        {
+            "apellido": "Bazan",
+            "nombre": "Guillermo",
+            "edad": 46,
+            "residencia": "CABA, Argentina",
+            "foto_perfil": "https://github.com/bazang-code/img/guillermo.png"
+        },
+        {
+            "apellido": "Marinangeli",
+            "nombre": "Renzo",
+            "edad": 18,
+            "residencia": "Mar del Plata, Argentina",
+            "foto_perfil": "https://github.com/bazang-code/img/Renzo..png"
+        },
+        {
+            "apellido": "Galeppi",
+            "nombre": "Yamila",
+            "edad": 18,
+            "residencia": "Bs As, Argentina",
+            "foto_perfil": "https://github.com/bazang-code/img/yamila.png"
+        },
+        {
+            "apellido": "Navarro",
+            "nombre": "Franco",
+            "edad": 18,
+            "residencia": "Bs As, Argentina",
+            "foto_perfil": "https://github.com/bazang-code/img/franco.png"
+        }
+    ]
+}
