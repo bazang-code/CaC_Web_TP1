@@ -1,28 +1,28 @@
-let original = document.querySelector("#Plantilla");
+let original = document.querySelector("#Integrantes");
 let contenedor = document.querySelector("#Contenedor");
 
 let botonAgregar = document.querySelector("#Agregar");
 let botonQuitar = document.querySelector("#Quitar");
 
-let referencia = original.cloneNode(true);
+let referencia = Integrantes.cloneNode(true);
 
-original.remove();
+Integrantes.remove();
 
 function AgregarArticulo() {
-    fetch("https://randomuser.me/api")
+    fetch("https://github.com/bazang-code/nosotros.json")
     .then(response => response.json())
     .then(data => {
         // Procesamiento de la info que llega de la API
     
-        console.log(data.results[0].name.first + " " + data.results[0].name.last);
+        console.log(data.results[0].nombre + " " + data.results[0].apellido);
     
-        console.log(data.results[0].picture.large);
+        console.log(data.results[0].foto_perfil);
     
         let nuevaPersona = referencia.cloneNode(true);
     
-        nuevaPersona.querySelector("img").src = data.results[0].picture.large;
-        nuevaPersona.querySelector("img").alt = "Foto CV";
-        nuevaPersona.querySelector("p").innerHTML = data.results[0].name.first + " " + data.results[0].name.last;
+        nuevaPersona.querySelector("img").src = data.results[0].foto_perfil;
+        nuevaPersona.querySelector("img").alt = "Foto Integrante";
+        nuevaPersona.querySelector("p").innerHTML = data.results[0].nombre + " " + data.results[0].apellido;
     
         contenedor.appendChild(nuevaPersona);
         })
