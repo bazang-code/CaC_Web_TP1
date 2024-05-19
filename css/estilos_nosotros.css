@@ -1,11 +1,11 @@
-main {
+/* main {
     min-height: 70vh;
     display: flex;
     flex-direction: column;
 
     justify-content: center;
     align-items: center;
-}
+} */
 
 article {
     background-color: cadetblue;
@@ -22,14 +22,14 @@ article p {
     text-align: center;
 }
 
-/* .botonera {
-    position: fixed;
-    bottom: 15px;
+.botonera {
+    /* position: fixed;  */
+    bottom: 15px; 
     right: 15px;
 
-    background-color: red;
+    background-color: rgb(0, 255, 200);
     padding: 15px;
-} */
+}
 
 #Contenedor {
     display: flex;
