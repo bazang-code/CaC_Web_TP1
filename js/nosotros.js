@@ -1,8 +1,6 @@
 
-// URL del archivo JSON en GitHub
 const url = 'https://raw.githubusercontent.com/bazang-code/CaC_Web_TP1/main/nosotros.json';
 
-// Función para obtener y procesar el archivo JSON
 fetch(url)
   .then(response => {
     if (!response.ok) {
@@ -11,17 +9,27 @@ fetch(url)
     return response.json(); // Parsear la respuesta JSON
   })
   .then(data => {
-    // Verifica la estructura del archivo JSON antes de acceder a sus propiedades
+    // Verifica que el data no es undefined y es un array
     if (Array.isArray(data) && data.length > 0) {
-      console.log(data[0]); // Acceder al primer elemento del array
+      console.log(data[0]); // Accede al primer elemento del array
     } else {
-      throw new Error('Unexpected JSON structure');
+      throw new Error('Unexpected JSON structure: expected an array with at least one element');
     }
   })
   .catch(error => {
     console.error('Ocurrió un error!', error);
   });
 
+  .then(data => {
+    console.log(data); // Imprime el contenido del JSON
+    if (Array.isArray(data) && data.length > 0) {
+      console.log(data[0]); // Accede al primer elemento del array
+    } else {
+      throw new Error('Unexpected JSON structure: expected an array with at least one element');
+    }
+  })
+
+  
 /*
 
 let original = document.querySelector("#Integrantes");
