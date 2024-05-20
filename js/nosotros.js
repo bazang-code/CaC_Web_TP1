@@ -25,7 +25,9 @@ function AgregarArticulo() {
                 let nuevaPersona = referencia.cloneNode(true);
                 nuevaPersona.querySelector("img").src = persona.foto_perfil;
                 nuevaPersona.querySelector("img").alt = "Foto Integrante";
-                nuevaPersona.querySelector("p").innerHTML = persona.nombre + " " + persona.apellido;
+                nuevaPersona.querySelector(".nombre").innerHTML = persona.nombre + " " + persona.apellido;
+                nuevaPersona.querySelector(".edad").innerHTML = persona.edad + " años";
+                nuevaPersona.querySelector(".residencia").innerHTML = persona.residencia;
                 
                 contenedor.appendChild(nuevaPersona);
             });

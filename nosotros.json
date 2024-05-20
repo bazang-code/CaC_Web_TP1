@@ -5,28 +5,28 @@
           "nombre": "Guillermo",
           "edad": 46,
           "residencia": "CABA, Argentina",
-          "foto_perfil": "https://github.com/bazang-code/img/guillermo.png"
+          "foto_perfil": "https://raw.githubusercontent.com/bazang-code/CaC_Web_TP1/main/img/guillermo.png"
       },
       {
           "apellido": "Marinangeli",
           "nombre": "Renzo",
           "edad": 18,
           "residencia": "Mar del Plata, Argentina",
-          "foto_perfil": "https://github.com/bazang-code/img/Renzo.png"
+          "foto_perfil": "https://raw.githubusercontent.com/bazang-code/CaC_Web_TP1/main/img/Renzo.png"
       },
       {
           "apellido": "Galeppi",
           "nombre": "Yamila",
           "edad": 18,
           "residencia": "Bs As, Argentina",
-          "foto_perfil": "https://github.com/bazang-code/img/yamila.png"
+          "foto_perfil": "https://raw.githubusercontent.com/bazang-code/CaC_Web_TP1/main/img/yamila.png"
       },
       {
           "apellido": "Navarro",
           "nombre": "Franco",
           "edad": 18,
           "residencia": "Bs As, Argentina",
-          "foto_perfil": "https://github.com/bazang-code/img/franco.png"
+          "foto_perfil": "https://raw.githubusercontent.com/bazang-code/CaC_Web_TP1/main/img/franco.png"
       }
     ]
   }
