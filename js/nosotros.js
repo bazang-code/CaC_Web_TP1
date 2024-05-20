@@ -9,7 +9,7 @@ let referencia = Integrantes.cloneNode(true);
 Integrantes.remove();
 
 function AgregarArticulo() {
-    fetch("https://github.com/bazang-code/nosotros.json")
+    fetch("https://raw.githubusercontent.com/bazang-code/CaC_Web_TP1/main/nosotros.json")
     .then(response => response.json())
     .then(data => {
         // Procesamiento de la info que llega de la API
