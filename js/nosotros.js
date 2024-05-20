@@ -14,11 +14,14 @@ function AgregarArticulo() {
     .then(response => response.json())
     .then(data => {
 
-        if (Array.isArray(data) && data.length > 0) {
-            // Iterar sobre cada persona en el array
-            data.forEach(persona => {
-                console.log(persona.apellido); // Imprimir apellido en la consola
+        console.log("Datos recibidos:", data); // Agrego esto para ver los datos completos
 
+        // Asegúrate de que data tiene la estructura esperada
+        if (data.integrantes && Array.isArray(data.integrantes) && data.integrantes.length > 0) {
+            // Iterar sobre cada persona en el array `integrantes`
+            data.integrantes.forEach(persona => {
+                console.log("Procesando persona:", persona); // Añade esto para ver cada persona
+                
                 let nuevaPersona = referencia.cloneNode(true);
                 nuevaPersona.querySelector("img").src = persona.foto_perfil;
                 nuevaPersona.querySelector("img").alt = "Foto Integrante";
@@ -27,10 +30,12 @@ function AgregarArticulo() {
                 contenedor.appendChild(nuevaPersona);
             });
         } else {
-            console.error("La estructura del JSON no es la esperada o el array está vacío.");
+            console.error("La estructura del JSON no es la esperada o el array `integrantes` está vacío.");
         }
     })
     .catch(error => console.log("Ocurrió un error! " + error));
+}
+
 
 
 //         // Procesamiento de la info que llega de la API
@@ -48,7 +53,7 @@ function AgregarArticulo() {
 //         contenedor.appendChild(nuevaPersona);
 //         })
 //     .catch(error => console.log("Ocurrió un error! " + error));
-}
+// }
 
 function QuitarArticulo() {
     if(contenedor.childElementCount > 0){
