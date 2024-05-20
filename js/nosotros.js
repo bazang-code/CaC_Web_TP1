@@ -6,27 +6,48 @@ let botonQuitar = document.querySelector("#Quitar");
 
 let referencia = Integrantes.cloneNode(true);
 
-Integrantes.remove();
+// Integrantes.remove();
+original.remove();
 
 function AgregarArticulo() {
     fetch("https://raw.githubusercontent.com/bazang-code/CaC_Web_TP1/main/nosotros.json")
     .then(response => response.json())
     .then(data => {
-        // Procesamiento de la info que llega de la API
-    
-        console.log(data.results[0].nombre + " " + data.results[0].apellido);
-    
-        // console.log(data.results[0].foto_perfil);
-    
-        let nuevaPersona = referencia.cloneNode(true);
-    
-        // nuevaPersona.querySelector("img").src = data.results[0].foto_perfil;
-        // nuevaPersona.querySelector("img").alt = "Foto Integrante";
-        nuevaPersona.querySelector("p").innerHTML = data.results[0].nombre + " " + data.results[0].apellido;
-    
-        contenedor.appendChild(nuevaPersona);
-        })
+
+        if (Array.isArray(data) && data.length > 0) {
+            // Iterar sobre cada persona en el array
+            data.forEach(persona => {
+                console.log(persona.apellido); // Imprimir apellido en la consola
+
+                let nuevaPersona = referencia.cloneNode(true);
+                nuevaPersona.querySelector("img").src = persona.foto_perfil;
+                nuevaPersona.querySelector("img").alt = "Foto Integrante";
+                nuevaPersona.querySelector("p").innerHTML = persona.nombre + " " + persona.apellido;
+                
+                contenedor.appendChild(nuevaPersona);
+            });
+        } else {
+            console.error("La estructura del JSON no es la esperada o el array está vacío.");
+        }
+    })
     .catch(error => console.log("Ocurrió un error! " + error));
+
+
+//         // Procesamiento de la info que llega de la API
+    
+//         console.log(data.results[0].nombre + " " + data.results[0].apellido);
+    
+//         // console.log(data.results[0].foto_perfil);
+    
+//         let nuevaPersona = referencia.cloneNode(true);
+    
+//         // nuevaPersona.querySelector("img").src = data.results[0].foto_perfil;
+//         // nuevaPersona.querySelector("img").alt = "Foto Integrante";
+//         nuevaPersona.querySelector("p").innerHTML = data.results[0].nombre + " " + data.results[0].apellido;
+    
+//         contenedor.appendChild(nuevaPersona);
+//         })
+//     .catch(error => console.log("Ocurrió un error! " + error));
 }
 
 function QuitarArticulo() {
@@ -43,4 +64,3 @@ botonAgregar.addEventListener("click", function(){
 botonQuitar.addEventListener("click", function(){
     QuitarArticulo();
 });
-
