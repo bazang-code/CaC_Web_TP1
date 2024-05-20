@@ -1,4 +1,4 @@
-
+/*
 const url = 'https://raw.githubusercontent.com/bazang-code/CaC_Web_TP1/main/nosotros.json';
 
 fetch(url)
@@ -28,9 +28,9 @@ fetch(url)
       throw new Error('Unexpected JSON structure: expected an array with at least one element');
     }
   })
-
+*/
   
-/*
+
 
 let original = document.querySelector("#Integrantes");
 let contenedor = document.querySelector("#Contenedor");
