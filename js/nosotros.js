@@ -31,14 +31,19 @@ fetch("https://bazang-code.github.io/CaC_Web_TP1/nosotros.json")
 function AgregarArticulo() {
    if (indiceActual < integrantesData.integrantes.length) {
 
-        console.log("Nombre "+ integrantesData.integrantes.nombre + " " + integrantesData.integrantes.apellido);
+        let integrante = integrantesData[indiceActual];
+
+        console.log("Nombre:", integrante.nombre);
+        console.log("Apellido:", integrante.apellido);
+        console.log("Foto Perfil:", integrante.foto_perfil);
+
         let nuevaPersona = referencia.cloneNode(true);
 
-        nuevaPersona.querySelector("img").src = integrantesData.integrantes.foto_perfil;
+        nuevaPersona.querySelector("img").src = integrante.foto_perfil;
         nuevaPersona.querySelector("img").alt = "Foto Integrante";
-        nuevaPersona.querySelector(".nombre").innerHTML = integrantesData.integrantes.nombre + " " + integrantesData.integrantes.apellido;
-        nuevaPersona.querySelector(".edad").innerHTML = integrantesData.integrantes.edad + " años";
-        nuevaPersona.querySelector(".residencia").innerHTML = integrantesData.integrantes.residencia;
+        nuevaPersona.querySelector(".nombre").innerHTML = integrante.nombre + " " + integrante.apellido;
+        nuevaPersona.querySelector(".edad").innerHTML = integrante.edad + " años";
+        nuevaPersona.querySelector(".residencia").innerHTML = integrante.residencia;
         
         contenedor.appendChild(nuevaPersona);
 
