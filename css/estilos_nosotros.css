@@ -4,8 +4,8 @@
     flex-direction: column;
 
     justify-content: center;
-    align-items: center;
-} */
+    align-items: center; 
+}  */
 
 article {
     background-color: cadetblue;
@@ -16,18 +16,17 @@ article {
 
 article img {
     border-radius: 999px;
-    width: 100%;
+    width: 4cm;
 }
 article p {
     text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .botonera {
     /* position: fixed;  */
     bottom: 15px; 
     right: 15px;
-
-    background-color: rgb(0, 255, 200);
     padding: 15px;
 }
 
