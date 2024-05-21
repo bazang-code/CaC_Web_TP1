@@ -21,6 +21,8 @@
 }
 
 /****************************************/
+
+
 #Categorias .contenido{
     display: flex;
     justify-content: space-around;
@@ -51,23 +53,48 @@
 .contenido:hover {
     text-decoration: none;
     color: #080808;
-    background: #e3e5d7;
+    background: #f6eddc;
 }
 /******************************************/
 
-/* Estilos generales del formulario */
-.contenedor_form {
+.contenedor_form_mapa {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 20px;
+    gap: 20px;
+}
+
+.contenedor_form, .contenedor_mapa {
+    background-color: #e3e5d7;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.contenedor_form, .contenedor_mapa {
+    flex-basis: 50%; /* reparto el espacion a la mitad*/
+}
+
+.contenedor_mapa{
+    position: relative;
+    overflow: hidden;
+    /* padding-top: 30%;  */
+}
+
+.contenedor_mapa p{
+    position: relative;
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+    padding: 10px;
 }
 
 fieldset {
     border: 2px solid #f6eddc;
     border-radius: 5px;
-    padding: 20px;
-    margin: 20px 0;
-    width: 40%;
+    padding: 10px;
+    /* width: 40%; */
 }
 
 legend {
@@ -78,44 +105,47 @@ legend {
 
 /* Estilos de los elementos del formulario */
 .form-group {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 label {
     display: block;
     font-weight: bold;
     margin-bottom: 5px;
-    font-size: 18px;
+    /* font-size: 18px; */
 }
 
-input[type="text"], input[type="email"], textarea {
-    padding: 10px 20px;
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 8px;
     border-radius: 5px;
     border: none;
     color: black;
     cursor: pointer;
 }
 
-input[type="submit"], input[type="reset"] {
-    padding: 10px 20px;
+.boton-submit, .boton-reset {
+    padding: 10px 15px;
     border-radius: 5px;
     border: none;
-    background-color: #e3e5d7;
+    background-color: #a5c8ca;
     color: black;
     font-weight: bold;
     cursor: pointer;
 }
 
-input[type="submit"]:hover, input[type="reset"]:hover {
+.boton-submit:hover, .boton-reset:hover {
     background-color: #586875;
 }
 
-/* Estilos adicionales según necesites */
-.boton-submit {
-    margin-right: 10px;
+/* Para dejar los botones en una línea */
+.form-group.button-group {
+    display: flex;
+    justify-content: center; /* botones centrados */
+    gap: 10px; /* Espacio entre los botones */
 }
 
-.boton-reset {
-    background-color: #ccc;
-    color: #333;
+.form-group.button-group input {
+    flex: none; /* Evita que los botones se estiren */
+    width: auto; /* Asegura que los botones se ajusten a su contenido */
 }

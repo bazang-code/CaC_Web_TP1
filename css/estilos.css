@@ -60,11 +60,7 @@ li {
 /************************************************************************************************/
 /* Media query para dispositivos de tamaño medio (Tablets) */
 @media only screen and (max-width: 768px) {
-    .contenedor_responsive {
-        width: 80%;
-        margin: 0 auto; /* Centrar el contenido */
-    }
-    
+   
     #logo_marco {
         width: 10%;
     }
@@ -84,11 +80,7 @@ li {
 
 /* Media query para dispositivos pequeños (Celulares) */
 @media only screen and (max-width: 480px) {
-    .contenedor_responsive {
-        width: 100%;
-        margin: 0 auto;
-    }
-    
+   
     #logo_marco {
         width: 50%;
     }
@@ -106,11 +98,6 @@ li {
     }
 }
 
-/* Otros estilos base */
-.contenedor_responsive {
-    width: 60%; /* Ancho base para pantallas grandes */
-    margin: 0 auto; /* Centrar el contenido */
-}
 
 #logo_marco {
     width: 20%; /* Ancho base para pantallas grandes */

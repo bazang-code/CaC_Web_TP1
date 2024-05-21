@@ -40,7 +40,7 @@
             <h3>ESTAMOS PARA AYUDARTE!!!</h3>
             <P>Horario de atención: Lunes a Viernes de 9 a 20 horas. Sábado de 9 a 16 horas</P>
             <div class="contenido"> 
-                <article class="Empresa">New Tech <img src="../img/Logo_new_tech.png" alt=""></article>
+                <!-- <article class="Empresa">New Tech <img src="../img/Logo_new_tech.png" alt=""></article> -->
 
                 <article>
                     <P>Servicio tecnico de pc en toda la capital federal</P>
@@ -50,10 +50,8 @@
                     <p>Reemplazo de procesador</p>
                     <p>Actualización de proteccion</p>     
                     <p>Reemplazo de pantalla de PC defectuosas</p>  
-                    <p>Instalación y mantenimiento de Redes IP</p>        
-                    <p></p>        
+                    <p>Instalación y mantenimiento de Redes IP</p>             
                 </article>
-                    
                 <article>
                     <P>Backup de información y traspaso entre discos rígidos</P>
                     <P>Instalación y actualización de Software</P>
@@ -64,13 +62,11 @@
                     <p>Reparación de PC y Notebooks</p>
                     <p>Instalación de servidores Linux para compartir archivos en oficina</p>
                 </article>
-
                 <article>
                     <P>Atención de urgencias</P>
                     <P>0800-555-1212</P>
                     <P>0800-555-2345</P>
                     <p>Tambien podes encontrarnos en nustras Redes Sociales</p>
-                    <p></p>
                 </article>
             </div>
         </section>
@@ -100,34 +96,40 @@
         </div> -->
         <!-- <img src="" alt="Contactanos" width="550" height="300" > -->
 
-        <div class="contenedor_form">
-            <fieldset>
-                <legend>Contactanos</legend>
-                <form action="" method="POST" target="_blank">
-                    <!-- Entrada de datos -->
-                    <!-- En la LABEL conviene poner el FOR con el mismo nombre que tiene el INPUT en el ID -->
-                    <div class="form-group">
-                        <label for="nombre">Nombre y Apellido:</label> <br>
-                        <input class="form-control" type="text" name="nombre" id="nombre" maxlength="50" required placeholder="Ingrese su nombre completo">
-                    </div>
-                    <div class="form-group">
-                        <label for="mail">Email:</label> <br>
-                        <input class="form-control" type="email" name="mail" id="mail" required placeholder="Ingrese su correo electrónico">
-                    </div>
-                    <div class="form-group">
-                        <label for="telefono">Teléfono:</label> <br>
-                        <input class="form-control" type="text" name="telefono" id="telefono" maxlength="15" placeholder="Ingrese su número de teléfono">
-                    </div>
-                    <div class="form-group">
-                        <label for="consulta">Consulta:</label> <br>
-                        <textarea class="form-control" name="consulta" id="consulta" cols="30" rows="5" placeholder="Escriba su consulta aquí"></textarea>
-                    </div>
-                    <div class="form-group">
-                        <input class="boton-submit" type="submit" value="Enviar">
-                        <input class="boton-reset" type="reset" value="Limpiar">
-                    </div>
-                </form>
-            </fieldset>
+        <div class="contenedor_form_mapa">
+            <div class="contenedor_form">
+                <fieldset>
+                    <legend>Contactanos</legend>
+                    <form action="" method="POST" target="_blank">
+                        <!-- Entrada de datos -->
+                        <!-- En la LABEL conviene poner el FOR con el mismo nombre que tiene el INPUT en el ID -->
+                        <div class="form-group">
+                            <label for="nombre">Nombre y Apellido:</label> <br>
+                            <input class="form-control" type="text" name="nombre" id="nombre" maxlength="50" required placeholder="Ingrese su nombre completo">
+                        </div>
+                        <div class="form-group">
+                            <label for="mail">Email:</label> <br>
+                            <input class="form-control" type="email" name="mail" id="mail" required placeholder="Ingrese su correo electrónico">
+                        </div>
+                        <div class="form-group">
+                            <label for="telefono">Teléfono:</label> <br>
+                            <input class="form-control" type="text" name="telefono" id="telefono" maxlength="15" placeholder="Ingrese su número de teléfono">
+                        </div>
+                        <div class="form-group">
+                            <label for="consulta">Consulta:</label> <br>
+                            <textarea class="form-control" name="consulta" id="consulta" cols="30" rows="5" placeholder="Escriba su consulta aquí"></textarea>
+                        </div>
+                        <div class="form-group button-group">
+                            <input class="boton-submit" type="submit" value="Enviar">
+                            <input class="boton-reset" type="reset" value="Limpiar">
+                        </div>
+                    </form>
+                </fieldset>
+            </div>
+            <div class="contenedor_mapa">
+                <p>Ubicanos aquí</p>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3283.366792015882!2d-58.38824458472573!3d-34.60226918047256!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccbbb7c68078b%3A0xdc264e1614a96ae2!2sOficinas%20Codo%20a%20Codo%20(subsuelo)!5e0!3m2!1sen!2sar!4v1621090696165!5m2!1sen!2sar" width="750" height="535" style="border:0;" allowfullscreen="" loading="lazy"></iframe>                
+            </div>
         </div>
     </main>
     
