@@ -20,7 +20,7 @@ fetch("https://bazang-code.github.io/CaC_Web_TP1/nosotros.json")
     .then(response => response.json())
     .then(data => {
         // Guardar los datos recibidos
-        integrantesData = data.integrantes;
+        integrantesData = data;
 
         console.log("Largo de data:", data.integrantes.length); // Veo el largo de mi archivo JSON
         console.log("Datos recibidos:", integrantesData); // Agrego esto para ver los datos completos
@@ -31,6 +31,7 @@ fetch("https://bazang-code.github.io/CaC_Web_TP1/nosotros.json")
 function AgregarArticulo() {
    if (indiceActual < integrantesData.integrantes.length) {
 
+        console.log("Nombre "+ integrantesData.integrantes.nombre + " " + integrantesData.integrantes.apellido);
         let nuevaPersona = referencia.cloneNode(true);
 
         nuevaPersona.querySelector("img").src = integrantesData.integrantes.foto_perfil;
