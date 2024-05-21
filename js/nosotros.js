@@ -20,7 +20,7 @@ fetch("https://bazang-code.github.io/CaC_Web_TP1/nosotros.json")
     .then(response => response.json())
     .then(data => {
         // Guardar los datos recibidos
-        integrantesData = data;
+        integrantesData = data.integrantes;
 
         console.log("Largo de data:", data.integrantes.length); // Veo el largo de mi archivo JSON
         console.log("Datos recibidos:", integrantesData); // Agrego esto para ver los datos completos
