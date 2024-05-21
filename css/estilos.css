@@ -58,15 +58,11 @@ li {
 }
    
 /************************************************************************************************/
-.contenedor_responsive {
-    width: 90%;
-    margin: 0 auto;
-}
-
 /* Media query para dispositivos de tamaño medio (Tablets) */
 @media only screen and (max-width: 768px) {
     .contenedor_responsive {
         width: 80%;
+        margin: 0 auto; /* Centrar el contenido */
     }
     
     #logo_marco {
@@ -77,10 +73,12 @@ li {
         display: flex;
         flex-direction: column;
         align-items: center;
+        padding: 0;
     }
 
     nav ul li {
         margin-bottom: 10px;
+        list-style: none;
     }
 }
 
@@ -88,8 +86,44 @@ li {
 @media only screen and (max-width: 480px) {
     .contenedor_responsive {
         width: 100%;
+        margin: 0 auto;
     }
-    /* Otros estilos específicos para celulares si es necesario */
+    
+    #logo_marco {
+        width: 50%;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+    }
+
+    nav ul li {
+        margin-bottom: 10px;
+        list-style: none;
+    }
+}
+
+/* Otros estilos base */
+.contenedor_responsive {
+    width: 60%; /* Ancho base para pantallas grandes */
+    margin: 0 auto; /* Centrar el contenido */
+}
+
+#logo_marco {
+    width: 20%; /* Ancho base para pantallas grandes */
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    padding: 0;
+}
+
+nav ul li {
+    list-style: none;
 }
 
 /************************************************************************************************/

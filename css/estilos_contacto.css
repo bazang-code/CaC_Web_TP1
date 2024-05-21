@@ -20,7 +20,7 @@
     background: #fff;
 }
 
-/*
+/****************************************/
 #Categorias .contenido{
     display: flex;
     justify-content: space-around;
@@ -53,7 +53,7 @@
     color: #080808;
     background: #e3e5d7;
 }
-*/
+/******************************************/
 
 /* Estilos generales del formulario */
 .contenedor_form {
