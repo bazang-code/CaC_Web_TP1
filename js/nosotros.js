@@ -1,67 +1,68 @@
-let original = document.querySelector("#Integrantes");
-let contenedor = document.querySelector("#Contenedor");
+document.addEventListener("DOMContentLoaded", function() {
+    let original = document.querySelector("#Integrantes");
+    let contenedor = document.querySelector("#Contenedor");
 
-let botonAgregar = document.querySelector("#Agregar");
-let botonQuitar = document.querySelector("#Quitar");
+    let botonAgregar = document.querySelector("#Agregar");
+    let botonQuitar = document.querySelector("#Quitar");
 
-let referencia = original.cloneNode(true);
+    let referencia = original.cloneNode(true);
+    original.remove(); // Eliminar el nodo original de la vista
 
-// Elimino el nodo original
-original.remove();
+    // Variable para rastrear el índice del integrante actual
+    let currentIndex = 0;
+    let integrantesData = [];
 
-// Variable para rastrear el índice del integrante actual
-let indiceActual = 0;
-let integrantesData = [];
+    // Cargar los datos del JSON al cargar la página
+    fetch("https://bazang-code.github.io/CaC_Web_TP1/nosotros.json")
+        .then(response => response.json())
+        .then(data => {
+            // Guardar los datos recibidos
+            integrantesData = data.integrantes;
+            console.log("Datos recibidos:", integrantesData); // Ver los datos completos
+        })
+        .catch(error => console.log("Ocurrió un error! " + error));
 
-//Ejemplo para el fetch: https://username.github.io/reponame/file.json
+    function AgregarArticulo() {
+        // Verificar que haya más integrantes por agregar
+        if (currentIndex < integrantesData.length) {
+            let integrante = integrantesData[currentIndex];
 
-/////////////////////////// Cargo los datos del JSON ///////////////////////////
-fetch("https://bazang-code.github.io/CaC_Web_TP1/nosotros.json")
-    .then(response => response.json())
-    .then(data => {
-        // Guardar los datos recibidos
-        integrantesData = data;
+            console.log("Nombre:", integrante.nombre);
+            console.log("Apellido:", integrante.apellido);
+            console.log("Foto Perfil:", integrante.foto_perfil);
 
-        console.log("Largo de data:", data.integrantes.length); // Veo el largo de mi archivo JSON
-        console.log("Datos recibidos:", integrantesData); // Agrego esto para ver los datos completos
-    })
-    .catch(error => console.log("Ocurrió un error! " + error));
-///////////////////////////////////////////////////////////////////////////////
+            let nuevaPersona = referencia.cloneNode(true);
+            nuevaPersona.querySelector("img").src = integrante.foto_perfil;
+            nuevaPersona.querySelector("img").alt = "Foto Integrante";
+            nuevaPersona.querySelector(".nombre").innerHTML = integrante.nombre + " " + integrante.apellido;
+            nuevaPersona.querySelector(".edad").innerHTML = integrante.edad + " años";
+            nuevaPersona.querySelector(".residencia").innerHTML = integrante.residencia;
 
-function AgregarArticulo() {
-   if (indiceActual < integrantesData.integrantes.length) {
+            contenedor.appendChild(nuevaPersona);
 
-        let nuevaPersona = referencia.cloneNode(true);
-
-        nuevaPersona.querySelector("img").src = integrantesData[indiceActual].foto_perfil;
-        nuevaPersona.querySelector("img").alt = "Foto Integrante";
-        nuevaPersona.querySelector(".nombre").innerHTML = integrantesData[indiceActual].nombre + " " + integrantesData[indiceActual].apellido;
-        nuevaPersona.querySelector(".edad").innerHTML = integrantesData[indiceActual].edad + " años";
-        nuevaPersona.querySelector(".residencia").innerHTML = integrantesData[indiceActual].residencia;
-        
-        contenedor.appendChild(nuevaPersona);
-
-        // incremento el indice
-        indiceActual++;
-   } else {
-    console.log("No hay mas integrantes.");
-   }
-}
-
-
-function QuitarArticulo() {
-    if(contenedor.childElementCount > 0){
-        contenedor.removeChild(contenedor.lastChild);
-        // decremento del indice
-        indiceActual--;
+            // Incrementar el índice del integrante actual
+            currentIndex++;
+        } else {
+            console.log("No hay más integrantes para agregar.");
+        }
     }
-}
 
-// Eventos
-botonAgregar.addEventListener("click", function(){
-    AgregarArticulo();
-});
+    function QuitarArticulo() {
+        if (contenedor.childElementCount > 0) {
+            contenedor.removeChild(contenedor.lastChild);
+            // Decrementar el índice del integrante actual para poder agregarlo de nuevo si es necesario
+            if (currentIndex > 0) {
+                currentIndex--;
+            }
+        }
+    }
 
-botonQuitar.addEventListener("click", function(){
-    QuitarArticulo();
+    // Eventos
+    botonAgregar.addEventListener("click", function() {
+        AgregarArticulo();
+    });
+
+    botonQuitar.addEventListener("click", function() {
+        QuitarArticulo();
+    });
 });
