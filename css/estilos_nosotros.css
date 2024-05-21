@@ -7,6 +7,13 @@
     align-items: center; 
 }  */
 
+article .sumario {
+    flex-grow: 1;
+    flex-basis: 100%; 
+    padding: 20px;
+    margin: 20px;
+}
+
 article {
     background-color: cadetblue;
     border-radius: 5px;
@@ -24,7 +31,10 @@ article p {
 }
 
 .botonera {
-    /* position: fixed;  */
+    display: flex;
+    gap: 10px; /* Añade un espacio entre los botones */
+    justify-content: center;
+    align-items: center;
     bottom: 15px; 
     right: 15px;
     padding: 15px;

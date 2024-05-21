@@ -4,39 +4,56 @@ let contenedor = document.querySelector("#Contenedor");
 let botonAgregar = document.querySelector("#Agregar");
 let botonQuitar = document.querySelector("#Quitar");
 
-let referencia = Integrantes.cloneNode(true);
+let referencia = original.cloneNode(true);
 
-// Integrantes.remove();
+// Elimino el nodo original
 original.remove();
 
-//https://username.github.io/reponame/file.json
+// Variable para rastrear el índice del integrante actual
+let indiceActual = 0;
+let integrantesData = [];
 
-function AgregarArticulo() {
-    fetch("https://bazang-code.github.io/CaC_Web_TP1/nosotros.json")
+//Ejemplo para el fetch: https://username.github.io/reponame/file.json
+
+/////////////////////////// Cargo los datos del JSON ///////////////////////////
+fetch("https://bazang-code.github.io/CaC_Web_TP1/nosotros.json")
     .then(response => response.json())
     .then(data => {
+        // Guardar los datos recibidos
+        integrantesData = data;
 
-         // Procesamiento de la info que llega de la API
+        console.log("Largo de data:", data.integrantes.length); // Veo el largo de mi archivo JSON
+        console.log("Datos recibidos:", integrantesData); // Agrego esto para ver los datos completos
+    })
+    .catch(error => console.log("Ocurrió un error! " + error));
+///////////////////////////////////////////////////////////////////////////////
 
-        console.log("Datos recibidos:", data); // Agrego esto para ver los datos completos
-        console.log(data.integrantes[0].nombre + " " + data.integrantes[0].apellido);
+function AgregarArticulo() {
+   if (indiceActual < integrantesData.integrantes.length) {
 
         let nuevaPersona = referencia.cloneNode(true);
 
-        nuevaPersona.querySelector("img").src = integrantes.foto_perfil;
+        nuevaPersona.querySelector("img").src = integrantesData.integrantes.foto_perfil;
         nuevaPersona.querySelector("img").alt = "Foto Integrante";
-        nuevaPersona.querySelector(".nombre").innerHTML = integrantes.nombre + " " + integrantes.apellido;
-        nuevaPersona.querySelector(".edad").innerHTML = integrantes.edad + " años";
-        nuevaPersona.querySelector(".residencia").innerHTML = integrantes.residencia;
+        nuevaPersona.querySelector(".nombre").innerHTML = integrantesData.integrantes.nombre + " " + integrantesData.integrantes.apellido;
+        nuevaPersona.querySelector(".edad").innerHTML = integrantesData.integrantes.edad + " años";
+        nuevaPersona.querySelector(".residencia").innerHTML = integrantesData.integrantes.residencia;
         
         contenedor.appendChild(nuevaPersona);
-    })
-    .catch(error => console.log("Ocurrió un error! " + error));
+
+        // incremento el indice
+        indiceActual++;
+   } else {
+    console.log("No hay mas integrantes.");
+   }
 }
+
 
 function QuitarArticulo() {
     if(contenedor.childElementCount > 0){
         contenedor.removeChild(contenedor.lastChild);
+        // decremento del indice
+        indiceActual--;
     }
 }
 
