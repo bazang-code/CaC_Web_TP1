@@ -20,6 +20,40 @@
     background: #fff;
 }
 
+/*
+#Categorias .contenido{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    font-style: normal;    
+    padding: 15px;
+    border-radius: 10dvh;
+    
+}
+#Categorias .contenido article {
+    width: 200px;
+    background-color: #0df0dd;
+    padding: 30px;
+    text-align:center; 
+    background: #eee;
+    border-radius: 35px;
+    margin-right: 5px;
+    flex-grow: 1;
+    align-items: center;
+    border: 2px solid #807d77; 
+       
+}
+
+.Empresa {
+    font-size: xx-large;
+}
+
+.contenido:hover {
+    text-decoration: none;
+    color: #080808;
+    background: #e3e5d7;
+}
+*/
 
 /* Estilos generales del formulario */
 .contenedor_form {
