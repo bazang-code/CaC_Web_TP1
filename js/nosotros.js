@@ -9,8 +9,10 @@ let referencia = Integrantes.cloneNode(true);
 // Integrantes.remove();
 original.remove();
 
+//https://username.github.io/reponame/file.json
+
 function AgregarArticulo() {
-    fetch("https://raw.githubusercontent.com/bazang-code/CaC_Web_TP1/main/nosotros.json")
+    fetch("https://bazang-code.github.io/CaC_Web_TP1/nosotros.json")
     .then(response => response.json())
     .then(data => {
 
@@ -37,8 +39,6 @@ function AgregarArticulo() {
     })
     .catch(error => console.log("Ocurrió un error! " + error));
 }
-
-
 
 //         // Procesamiento de la info que llega de la API
     
