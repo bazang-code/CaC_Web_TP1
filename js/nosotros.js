@@ -19,15 +19,15 @@ function AgregarArticulo() {
          // Procesamiento de la info que llega de la API
 
         console.log("Datos recibidos:", data); // Agrego esto para ver los datos completos
-        console.log(data.results[0].nombre + " " + data.results[0].apellido);
+        console.log(data.integrantes[0].nombre + " " + data.integrantes[0].apellido);
 
         let nuevaPersona = referencia.cloneNode(true);
 
-        nuevaPersona.querySelector("img").src = persona.foto_perfil;
+        nuevaPersona.querySelector("img").src = integrantes.foto_perfil;
         nuevaPersona.querySelector("img").alt = "Foto Integrante";
-        nuevaPersona.querySelector(".nombre").innerHTML = persona.nombre + " " + persona.apellido;
-        nuevaPersona.querySelector(".edad").innerHTML = persona.edad + " años";
-        nuevaPersona.querySelector(".residencia").innerHTML = persona.residencia;
+        nuevaPersona.querySelector(".nombre").innerHTML = integrantes.nombre + " " + integrantes.apellido;
+        nuevaPersona.querySelector(".edad").innerHTML = integrantes.edad + " años";
+        nuevaPersona.querySelector(".residencia").innerHTML = integrantes.residencia;
         
         contenedor.appendChild(nuevaPersona);
     })
