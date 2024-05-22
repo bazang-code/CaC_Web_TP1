@@ -82,6 +82,32 @@
     /* padding-top: 30%;  */
 }
 
+.contenedor_telefono {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    /* flex-direction: row; */
+    gap: 1rem; /* Espacio entre las opciones */
+}
+
+.telefono_opcion {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.telefono_opcion:nth-child(1), .telefono_opcion:nth-child(2) {
+    flex-basis: 10%;
+}
+
+.telefono_opcion:nth-child(3) {
+    flex-basis: 80%;
+}
+
+.telefono_opcion label {
+    margin-bottom: 0.5rem; /* Espacio entre el label y el input */
+}
+
 .contenedor_mapa p{
     position: relative;
     text-align: center;

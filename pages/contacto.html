@@ -35,14 +35,11 @@
         <h1>Contactanos</h1>
     </header>
 
-    
     <main>
         <section id="Categorias">
             <h3>ESTAMOS PARA AYUDARTE!!!</h3>
             <P>Horario de atención: Lunes a Viernes de 9 a 20 horas. Sábado de 9 a 16 horas</P>
             <div class="contenido"> 
-                <!-- <article class="Empresa">New Tech <img src="../img/Logo_new_tech.png" alt=""></article> -->
-
                 <article>
                     <P>Servicio tecnico de pc en toda la capital federal</P>
                     <P>Vamos a domicilio para reparar su pc</P>
@@ -71,32 +68,6 @@
                 </article>
             </div>
         </section>
-        
-
-
-
-
-        <!-- <div>
-            <h2><p>Horario de atención: Lunes a Viernes de 9 a 20 horas. Sábado de 9 a 16 horas.
-            </h2>
-                </p>
-                    <ul>
-                        <li>Servicio tecnico de pc en toda la capital federal.</li>
-                        <li>Vamos a domicilio para reparar su pc.</li>
-                        <li>Atención de urgencias.</li>
-                        <li>Instalación de sistema operativo.</li>
-                        <li>Soporte on site (en el domicilio del cliente).</li>
-                        <li>Backup de información y traspaso entre discos rígidos.</li>
-                        <li>Instalación y actualización de Software.</li>
-                        <li>Armado de equipo y PC personalizado.</li>
-                        <li>Instalación de drivers y controladores.</li>
-                        <li>Desinfección de virus.</li>
-                        <li>Instalación y mantenimiento de redes informáticas.</li>
-                        <li>Instalación, configuración y cambio de dispositivos.</li>
-                    </ul>
-        </div> -->
-        <!-- <img src="" alt="Contactanos" width="550" height="300" > -->
-
         <div class="contenedor_form_mapa">
             <div class="contenedor_form">
                 <fieldset>
@@ -105,48 +76,41 @@
                         <!-- Entrada de datos -->
                         <!-- En la LABEL conviene poner el FOR con el mismo nombre que tiene el INPUT en el ID -->
                         <div class="form-group">
-                            <label for="nombre">Nombre y Apellido:</label> <br>
+                            <label for="nombre">Nombre y Apellido:</label>
                             <input class="form-control" type="text" name="nombre" id="nombre" maxlength="50" required placeholder="Ingrese su nombre completo">
                         </div>
                         <div class="form-group">
-                            <label for="mail">Email:</label> <br>
+                            <label for="mail">Email:</label>
                             <input class="form-control" type="email" name="mail" id="mail" required placeholder="Ingrese su correo electrónico">
-                        </div>
-
-
-
-                        <!--
+                        </div>                        
                         <div>
-                            <legend>Su telefono es Fijo o Celular</legend>
-                            <label for="Fijo">Fijo</label>
-                            <input id="Fijo" name="telefono" value="Celular" type="radio">
-                    
-                            <label for="Celular">Celular</label>
-                            <input id="Celular" name="telefono" value="Celular" type="radio">                   
-                                       
+                            <label>Teléfono:</label>
+                            <div class="contenedor_telefono">
+                                <div class="telefono_opcion">
+                                    <label for="Fijo">Fijo</label>
+                                    <input id="Fijo" name="telefono_tipo" value="Fijo" type="radio">
+                                </div>
+                                <div class="telefono_opcion">
+                                    <label for="Celular">Celular</label>
+                                    <input id="Celular" name="telefono_tipo" value="Celular" type="radio">
+                                </div>
+                                <div class="telefono_opcion">
+                                    <label for="telefono">Número de teléfono:</label>
+                                    <input class="form-control" type="text" name="telefono_numero" id="telefono" maxlength="15" placeholder="Ingrese su número de teléfono">
+                                </div>
+                            </div>
                         </div>
-                        -->
-
-
                         <div class="form-group">
-                            <label for="telefono">Ahora si, ingrese por favor su numero de teléfono:</label> <br>
-                            <input class="form-control" type="text" name="telefono" id="telefono" maxlength="15" placeholder="Ingrese su número de teléfono">
-                        </div>
-                        <div class="form-group">
-                            <label for="consulta">Consulta:</label> <br>
+                            <label for="consulta">Consulta:</label>
                             <textarea class="form-control" name="consulta" id="consulta" cols="30" rows="5" placeholder="Escriba su consulta aquí"></textarea>
                         </div>
-
-
-                        <!--
-                        <label for="Horario">En que horario podemos comunicarnos con vos</label>
-                        <select name="Horario" id="Turno">
-                            <option value="Manana">De 9 a 12 hs</option>
-                            <option value="Tarde">De 12 a 20 hs</option>
-                            
-                        </select>
-
-                        -->
+                        <div class="form-group">
+                            <label for="Horario">En que horario podemos comunicarnos con vos</label>
+                            <select name="Horario" id="Turno">
+                                <option value="Manana">De 9 a 12 hs</option>
+                                <option value="Tarde">De 12 a 20 hs</option>
+                            </select>
+                        </div>
 
                         <div class="form-group button-group">
                             <input class="boton-submit" type="submit" value="Enviar">
