@@ -152,13 +152,13 @@ nav ul li {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 50vh; /* O ajusta la altura según sea necesario */
-    margin-top: 50px;
-    margin-bottom: 50px;
+    height: 40vh; /* O ajusta la altura según sea necesario */
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 #carrusel_home {
-    height: 300px;
-    margin-bottom: 20px;
+    height: 250px;
+    margin-bottom: 10px;
     background-color: #f0f0f0;
 }
 

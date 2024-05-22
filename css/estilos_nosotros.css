@@ -24,6 +24,7 @@ article {
 article:hover {
     text-decoration: none;
     transform: scale(1.1); /* Escala el artículo al 110% de su tamaño original */
+    transition: 1s;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Añadir una sombra para resaltar */
 }
 
