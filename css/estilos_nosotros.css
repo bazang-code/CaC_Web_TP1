@@ -1,11 +1,12 @@
-/* main {
-    min-height: 70vh;
-    display: flex;
-    flex-direction: column;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-    justify-content: center;
-    align-items: center; 
-}  */
+html {
+    scroll-behavior: smooth;
+}
 
 article .sumario {
     flex-grow: 1;
@@ -28,23 +29,23 @@ article:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Añadir una sombra para resaltar */
 }
 
+
 article img {
     border-radius: 999px;
-    width: 4cm;
-}
-article p {
-    text-align: center;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width: 100px;
 }
 
 .botonera {
     display: flex;
-    gap: 10px; /* Añade un espacio entre los botones */
+    gap: 10px;
     justify-content: center;
     align-items: center;
-    bottom: 15px; 
-    right: 15px;
     padding: 15px;
+}
+
+article p {
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 #Contenedor {
