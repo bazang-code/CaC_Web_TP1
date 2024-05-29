@@ -8,6 +8,13 @@ html {
     scroll-behavior: smooth;
 }
 
+body, header, main {
+    background-color: #bdd6d2;
+    margin: 1rem;
+    min-width: 800px;
+    /* border: 3px green solid; */
+}
+
 article .sumario {
     flex-grow: 1;
     flex-basis: 100%; 
