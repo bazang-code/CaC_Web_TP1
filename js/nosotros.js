@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
-    let original = document.querySelector(".Integrantes");
+    let original = document.querySelector("#Integrantes");
     let contenedor = document.querySelector("#Contenedor");
 
     let botonAgregar = document.querySelector("#Agregar");
