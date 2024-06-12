@@ -22,7 +22,6 @@
 
 /****************************************/
 
-
 #Categorias .contenido{
     display: flex;
     justify-content: space-around;
@@ -49,7 +48,7 @@
 .Empresa {
     font-size: xx-large;
 }
-
+/*
 .contenido:hover {
     text-decoration: none;
     color: #080808;
@@ -67,7 +66,7 @@
 
 .contenedor_form, .contenedor_mapa {
     background-color: #e3e5d7;
-    padding: 10px;
+    padding: 50px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
@@ -174,4 +173,20 @@ label {
 .form-group.button-group input {
     flex: none; /* Evita que los botones se estiren */
     width: auto; /* Asegura que los botones se ajusten a su contenido */
+}
+
+p1 {
+    font-size: xx-large;
+    color: rgb(206, 42, 56);
+    
+}
+
+p2 {
+    margin-left: 5%;
+}
+
+#Categorias h3 {
+    margin-left: 5%;
+    font-size: xx-large;
+    text-decoration:solid;
 }
