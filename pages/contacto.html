@@ -114,17 +114,43 @@
                             <input class="form-control" type="text" name="nombre" id="nombre" maxlength="50" required placeholder="Ingrese su nombre completo">
                         </div>
                         <div class="form-group">
-                            <label for="mail">Email:</label> <br>
+                            <label for="mail">Correo electrónico:</label>
                             <input class="form-control" type="email" name="mail" id="mail" required placeholder="Ingrese su correo electrónico">
-                        </div>
-                        <div class="form-group">
-                            <label for="telefono">Teléfono:</label> <br>
-                            <input class="form-control" type="text" name="telefono" id="telefono" maxlength="15" placeholder="Ingrese su número de teléfono">
-                        </div>
-                        <div class="form-group">
-                            <label for="consulta">Consulta:</label> <br>
-                            <textarea class="form-control" name="consulta" id="consulta" cols="30" rows="5" placeholder="Escriba su consulta aquí"></textarea>
-                        </div>
+                        </div> 
+                        <div>
+                            <label>Número de Teléfono:</label>
+                            <div class="contenedor_telefono">
+                                <div class="telefono_opcion">
+                                    <label for="Fijo">Fijo</label>
+                                    <input id="Fijo" name="telefono_tipo" value="Fijo" type="radio">
+                                </div>
+                                <div class="telefono_opcion">
+                                    <label for="Celular">Celular</label>
+                                    <input id="Celular" name="telefono_tipo" value="Celular" type="radio">
+                                </div>
+                                <div class="telefono_opcion">
+                                    <label for="telefono">Número:</label>
+                                    <input class="form-control" type="text" name="telefono" id="telefono" maxlength="15" placeholder="Ingrese su número">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="consulta">Consulta:</label>
+                                <textarea class="form-control" name="consulta" id="consulta" cols="30" rows="5" placeholder="Escriba su consulta aquí"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="Turno">En que horario podemos comunicarnos</label>
+                                <select name="Turno" id="Turno">
+                                    <option value="Manana">De 9 a 12 hs</option>
+                                    <option value="Tarde">De 12 a 20 hs</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="Newsletter">Desea recibir informacion de nuestra empresa - Newsletter New Tech</label>
+                                <select name="" id="">
+                                    <option value="Si"> Si </option>
+                                    <option value="No"> No </option>
+                                </select>
+                            </div>
                         <div class="form-group button-group">
                             <input class="boton-submit" type="submit" value="Enviar">
                             <input class="boton-reset" type="reset" value="Limpiar">
