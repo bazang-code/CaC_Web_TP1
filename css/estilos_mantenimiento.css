@@ -12,11 +12,6 @@ main {
 
 .alternating-content.reverse {
     flex-direction: row-reverse;
-    width: 900px; /* Cambiar el tamaño de la imagen */
-    height: auto; /* Mantener la relación de aspecto original */
-    margin-top: 20px; /* Mover la imagen hacia abajo */
-    margin-left: 150px; /* Mover la imagen hacia la derecha */
-
 }
 
 .alternating-content img {
@@ -24,23 +19,15 @@ main {
     object-fit: cover;
 }
 
-.alternating-content h3, h4 {
-    
+.alternating-content h3 {
     text-align: center;
     flex: 1;
-    margin-bottom: 3rem;
-    font-size: 50px;
-}
-
-.alternating-content h4 {
-    
-    font-size: 25px;
 }
 
 .alternating-content p {
     flex: 1;
-    text-align: center;
-    }
+    text-align: left;
+}
 
 @media (max-width: 768px) {
     .alternating-content,
@@ -51,92 +38,4 @@ main {
     .alternating-content img {
         width: 100%;
     }
-}
-
-.alternating-content.reverse button{
-    background-color: #007bff; /* Color de fondo azul */
-    color: #fff; /* Color de texto blanco */
-    border: 2px solid #007bff; /* Borde de 2px sólido azul */
-    border-radius: 5px; /* Bordes redondeados */
-    padding: 10px 20px; /* Espacio interior del botón */
-    margin: 5px; /* Margen entre botones */
-    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
-    font-weight: bold; /* Texto en negrita */
-}
-
-.alternating-content.reverse button:hover {
-    background-color: #0056b3; 
-}
-
-.btn-wsp {
-    position: fixed;
-    width: 55px;
-    height: 55px;
-    line-height: 55px;
-    bottom: 50px;
-    right: 30px;
-    background: #0df053;
-    color: #fff;
-    border-radius: 50px;
-    text-align: center;
-    font-size: 30px;
-    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.3);
-    z-index: 100;
-}
-
-.btn-wsp:hover {
-    text-decoration: none;
-    color: #0df053;
-    background: #fff;
-}
-
-@media (max-width: 768px) {
-    main {
-        padding: 0 15px; /* Ajustar el padding del main */
-    }
-
-    .alternating-content,
-    .alternating-content.reverse {
-        flex-direction: column;
-        gap: 1rem; /* Reducir el espacio entre los elementos */
-    }
-
-    .alternating-content img {
-        width: 100%;
-    }
-
-    .alternating-content.reverse {
-        margin-left: 0; /* Eliminar el margen izquierdo en vista móvil */
-    }
-
-    .alternating-content h3, .alternating-content h4 {
-        font-size: 36px; /* Reducir el tamaño del título */
-        margin-bottom: 2rem; /* Reducir el espacio inferior del título */
-        text-align: center; /* Centrar texto */
-    }
-
-    .alternating-content h4 {
-        font-size: 20px; /* Reducir el tamaño del subtítulo */
-    }
-
-    .alternating-content p {
-        text-align: center; /* Centrar texto */
-    }
-
-    .alternating-content.reverse button {
-        font-size: 16px; /* Reducir el tamaño de fuente del botón */
-    }
-    
-    .btn-wsp {
-        bottom: 30px; /* Ajustar la posición del botón de WhatsApp */
-        right: 15px;
-    }
-
-    .btn-wsp:hover {
-        color: #0df053;
-        background: #fff;
-    }
-}
-footer {
-    
 }

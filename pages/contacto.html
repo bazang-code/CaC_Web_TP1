@@ -26,8 +26,8 @@
                 <li><a class="nav" href="../index.html">Home</a></li>
                 <li><a class="nav" href="./diagnostico.html">Diagnóstico y Reparación de PCs</a></li>
                 <li><a class="nav" href="./mantenimiento.html">Mantenimiento Remoto</a></li>
-                <!-- <li><a class="nav" href="./tecnico_domicilio.html">Técnico a Domicilio</a></li>
-                <li><a class="nav" href="./venta_accesorios.html">Venta de Accesorios</a></li> -->
+                <li><a class="nav" href="./tecnico_domicilio.html">Servicio Técnico</a></li>
+                <!-- <li><a class="nav" href="./pages/venta_accesorios.html">Venta de Accesorios</a></li> -->
                 <li><a class="nav_actual">Contacto</a></li>
                 <li><a class="nav" href="./nosotros.html">Nosotros</a></li>
             </ul>
@@ -39,7 +39,7 @@
     <main>
         <section id="Categorias">
             <h3>ESTAMOS PARA AYUDARTE!!!</h3>
-            <P2>Horario de atención: Lunes a Viernes de 9 a 20 horas. Sábado de 9 a 16 horas</P2>
+            <P>Horario de atención: Lunes a Viernes de 9 a 20 horas. Sábado de 9 a 16 horas</P>
             <div class="contenido"> 
                 <!-- <article class="Empresa">New Tech <img src="../img/Logo_new_tech.png" alt=""></article> -->
 
@@ -52,7 +52,6 @@
                     <p>Actualización de proteccion</p>     
                     <p>Reemplazo de pantalla de PC defectuosas</p>  
                     <p>Instalación y mantenimiento de Redes IP</p>             
-                    
                 </article>
                 <article>
                     <P>Backup de información y traspaso entre discos rígidos</P>
@@ -65,14 +64,10 @@
                     <p>Instalación de servidores Linux para compartir archivos en oficina</p>
                 </article>
                 <article>
-                    <P1>ATENCION A URGENCIAS</P1>
+                    <P>Atención de urgencias</P>
                     <P>0800-555-1212</P>
                     <P>0800-555-2345</P>
-                    <P>011-45689745</P>
-                    <p>soportenewtech@newtech.com</p>
-                    <p>Tambien podes encontrarnos en nuestras Redes Sociales</p>
-                    <img src="../img/instagram_logo.png" alt="" width="48px">
-                    <img src="../img/facebook_logo.png" alt="" width="48">                    
+                    <p>Tambien podes encontrarnos en nustras Redes Sociales</p>
                 </article>
             </div>
         </section>
@@ -105,77 +100,36 @@
         <div class="contenedor_form_mapa">
             <div class="contenedor_form">
                 <fieldset>
-                                   
-                     
                     <legend>Contactanos</legend>
                     <form action="" method="POST" target="_blank">
                         <!-- Entrada de datos -->
                         <!-- En la LABEL conviene poner el FOR con el mismo nombre que tiene el INPUT en el ID -->
                         <div class="form-group">
-                            <label for="nombre">Nombre y Apellido:</label>
+                            <label for="nombre">Nombre y Apellido:</label> <br>
                             <input class="form-control" type="text" name="nombre" id="nombre" maxlength="50" required placeholder="Ingrese su nombre completo">
                         </div>
                         <div class="form-group">
-                            <label for="mail">Correo electrónico:</label>
+                            <label for="mail">Email:</label> <br>
                             <input class="form-control" type="email" name="mail" id="mail" required placeholder="Ingrese su correo electrónico">
                         </div>
                         <div class="form-group">
-                            <label for="provincia">Provincia:</label>
-                            <input class="form-control" type="text" name="provincia" id="provincia" maxlength="50" required placeholder="Ingrese la provincia donde reside">
+                            <label for="telefono">Teléfono:</label> <br>
+                            <input class="form-control" type="text" name="telefono" id="telefono" maxlength="15" placeholder="Ingrese su número de teléfono">
                         </div>
                         <div class="form-group">
-                            <label for="localidad">Localidad:</label>
-                            <input class="form-control" type="text" name="localidad" id="localidad" maxlength="50" required placeholder="Ingrese la localidad">
+                            <label for="consulta">Consulta:</label> <br>
+                            <textarea class="form-control" name="consulta" id="consulta" cols="30" rows="5" placeholder="Escriba su consulta aquí"></textarea>
                         </div>
-                        <div class="form-group">
-                            <label for="direccion">Direccion Exacta:</label>
-                            <input class="form-control" type="text" name="direccion" id="localidad" maxlength="50" required placeholder="Ingrese su direccion exacta">
-                        </div>
-                        <div>
-                            <label>Número de Teléfono:</label>
-                            <div class="contenedor_telefono">
-                                <div class="telefono_opcion">
-                                    <label for="Fijo">Fijo</label>
-                                    <input id="Fijo" name="telefono_tipo" value="Fijo" type="radio">
-                                </div>
-                                <div class="telefono_opcion">
-                                    <label for="Celular">Celular</label>
-                                    <input id="Celular" name="telefono_tipo" value="Celular" type="radio">
-                                </div>
-                                <div class="telefono_opcion">
-                                    <label for="telefono">Número:</label>
-                                    <input class="form-control" type="text" name="telefono" id="telefono" maxlength="15" placeholder="Ingrese su número">
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="consulta">Consulta:</label>
-                                <textarea class="form-control" name="consulta" id="consulta" cols="30" rows="5" placeholder="Escriba su consulta aquí"></textarea>
-                            </div>
-                            <div class="form-group">
-                                <label for="Turno">En que horario podemos comunicarnos</label>
-                                <select name="Turno" id="Turno">
-                                    <option value="Manana">De 9 a 12 hs</option>
-                                    <option value="Tarde">De 12 a 20 hs</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label for="Newsletter">Desea recibir informacion de nuestra empresa - Newsletter New Tech</label>
-                                <select name="" id="">
-                                    <option value="Si"> Si </option>
-                                    <option value="No"> No </option>
-                                </select>
-                            </div>
                         <div class="form-group button-group">
                             <input class="boton-submit" type="submit" value="Enviar">
                             <input class="boton-reset" type="reset" value="Limpiar">
                         </div>
                     </form>
-               
                 </fieldset>
             </div>
             <div class="contenedor_mapa">
                 <p>Ubicanos aquí</p>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3283.366792015882!2d-58.38824458472573!3d-34.60226918047256!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccbbb7c68078b%3A0xdc264e1614a96ae2!2sOficinas%20Codo%20a%20Codo%20(subsuelo)!5e0!3m2!1sen!2sar!4v1621090696165!5m2!1sen!2sar" width="738" height="823" style="border:0;" allowfullscreen="" loading="lazy"></iframe>                
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3283.366792015882!2d-58.38824458472573!3d-34.60226918047256!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccbbb7c68078b%3A0xdc264e1614a96ae2!2sOficinas%20Codo%20a%20Codo%20(subsuelo)!5e0!3m2!1sen!2sar!4v1621090696165!5m2!1sen!2sar" width="800" style="border:0;" allowfullscreen="" loading="lazy"></iframe>                
             </div>
         </div>
     </main>

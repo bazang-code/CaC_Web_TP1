@@ -17,8 +17,6 @@
      <link rel="stylesheet" href="../css/estilos_nav.css">
      <link rel="stylesheet" href="../css/estilos_mantenimiento.css">
      <link rel="stylesheet" href="../css/estilos.css">
-     
-
 </head>
 <body>
     <header>
@@ -28,8 +26,8 @@
                 <li><a class="nav" href="../index.html">Home</a></li>
                 <li><a class="nav" href="./diagnostico.html">Diagnóstico y Reparación de PCs</a></li>
                 <li><a class="nav_actual">Mantenimiento Remoto</a></li>
-                <!-- <li><a class="nav" href="./tecnico_domicilio.html">Técnico a Domicilio</a></li>
-                <li><a class="nav" href="./venta_accesorios.html">Venta de Accesorios</a></li> -->
+                <li><a class="nav" href="./tecnico_domicilio.html">Servicio Técnico</a></li>
+                <!-- <li><a class="nav" href="./pages/venta_accesorios.html">Venta de Accesorios</a></li> -->
                 <li><a class="nav" href="./contacto.html">Contacto</a></li>
                 <li><a class="nav" href="./nosotros.html">Nosotros</a></li>
             </ul>
@@ -37,42 +35,26 @@
  
         <h1>Mantenimiento Remoto de PC</h1>
     </header>
- 
+
     <main>
         <div class="alternating-content">
             <div>
-                <p><h3>Area Tecnica</h3>
-                    <h4>Para toda la Argentina</h4></p>
-                <p>Brindamos planes de mantenimiento preventivo, garantizando el correcto funcionamiento de su computadora, con planes elaborados a la necesidad de cada usuario. Así ante un inconveniente o avería en su computadora se comunica con nosotros y a la brevedad estaremos brindandole la solución.<br>
+                <p><h3>Mantenimiento remoto</h3>
+                Brindamos planes de mantenimiento preventivo, garantizando el correcto funcionamiento de su computadora, con planes elaborados a la necesidad de cada usuario. Así ante un inconveniente o avería en su computadora se comunica con nosotros y a la brevedad estaremos brindandole la solución.<br>
                 Planes de abono mensual y una contratacion mínima de seis meses.</p>
             </div>
-            
             <img src="../img/soporte_remoto_2.jpg" alt="Mantenimiento remoto de PCs" class="image">
-        </div> 
+        </div>
     
         <div class="alternating-content reverse">
             <div>
-                <p><h3>SOPORTE TECNICO</h3>
-                    <p>Conoce las ventajas del soporte <br>tecnico remoto y porque es mas eficaz y economico</p>
-                    
-                    <!--
-                    
-                    <p><button>Soporte Remoto</button></p>
-                    <p><button>Soporte a Domicilio</button></p>
-                   -->
-                    <p>
-                        <button data-target="soporte-remoto">Soporte Remoto</button>
-                    </p>
-                    <p>
-                        <button data-target="soporte-domicilio">Soporte a Domicilio</button>
-                    </p>
-            
-            
-                </div>
-            <img src="../img/Logo_new_tech.png" alt="windows" class="image">
-            
+                <p><h3>Instalacion, configuración y actualizaciones de S.O.</h3>
+                <p>Instalación de Windows, Office y programas en general<br>
+                Deje en manos de expertos la Instalación de Windows, Office, Antivirus y demás Software, para que este pueda funcionar de manera óptima, adecuada a sus requerimientos y a la capacidad de su ordenador (hardware). De esta forma obtendrá un máximo rendimiento con los recursos disponibles.</p>
+            </div>
+            <img src="../img/windows.jpg" alt="windows" class="image">
         </div>
-    <!-- Intervine
+    
         <div class="alternating-content">
             <div>
                 <p><h3>Configuración de Correo Electrónico</h3>
@@ -120,95 +102,15 @@
                 Instalación de Placas, Dispositivos y periféricos.</p>
             </div>
             <img src="../img/antesydesp.jpg" alt="antes y despues" class="image">
-             <img src="../img/tumblr_oejib2IWP61qigfjto1_400.gif" alt="Limpieza de pc" class="image"> -->
+            <!-- <img src="../img/tumblr_oejib2IWP61qigfjto1_400.gif" alt="Limpieza de pc" class="image"> -->
         </div>
     
         <!-- <div class="alternating-content reverse">
             <img src="../img/antesydesp.jpg" alt="antes y despues" class="image">
         </div> -->
-    </main> 
+    </main>
 
-    <div class="formulario" style="display: none;">
-        <h2>COMPLETE EL SIGUIENTE FORMULARIO PARA INICIAR EL SOPORTE TECNICO:</h2>
-        <form id="formulario-soporte" action="#" method="post">
-            <div class="form-group">
-                <label for="nombre">Nombre y Apellido:</label>
-                <input class="form-control" type="text" name="nombre" id="nombre" maxlength="50" required placeholder="Ingrese su nombre completo">
-            </div>
-            <div class="form-group">
-                <label for="mail">Correo electrónico:</label>
-                <input class="form-control" type="email" name="mail" id="mail" required placeholder="Ingrese su correo electrónico">
-            </div>
-            <div class="form-group">
-                <label for="provincia">Provincia:</label>
-                <input class="form-control" type="text" name="provincia" id="provincia" maxlength="50" required placeholder="Ingrese la provincia donde reside">
-            </div>
-            <div class="form-group">
-                <label for="localidad">Localidad:</label>
-                <input class="form-control" type="text" name="localidad" id="localidad" maxlength="50" required placeholder="Ingrese la localidad">
-            </div>
-            <div class="form-group">
-                <label for="direccion">Direccion Exacta:</label>
-                <input class="form-control" type="text" name="direccion" id="localidad" maxlength="50" required placeholder="Ingrese su direccion exacta">
-            </div>
-            <div>
-                <label>Número de Teléfono:</label>
-                <div class="contenedor_telefono">
-                    <div class="telefono_opcion">
-                        <label for="Fijo">Fijo</label>
-                        <input id="Fijo" name="telefono_tipo" value="Fijo" type="radio">
-                    </div>
-                    <div class="telefono_opcion">
-                        <label for="Celular">Celular</label>
-                        <input id="Celular" name="telefono_tipo" value="Celular" type="radio">
-                    </div>
-                    <div class="telefono_opcion">
-                        <label for="telefono">Número:</label>
-                        <input class="form-control" type="text" name="telefono" id="telefono" maxlength="15" placeholder="Ingrese su número">
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label for="consulta">Consulta:</label>
-                    <textarea class="form-control" name="consulta" id="consulta" cols="30" rows="5" placeholder="Escriba su consulta aquí"></textarea>
-                </div>
-                <div class="form-group">
-                    <label for="Turno">En que horario podemos comunicarnos</label>
-                    <select name="Turno" id="Turno">
-                        <option value="Manana">De 9 a 12 hs</option>
-                        <option value="Tarde">De 12 a 20 hs</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="Newsletter">Desea recibir informacion de nuestra empresa - Newsletter New Tech</label>
-                    <select name="" id="">
-                        <option value="Si"> Si </option>
-                        <option value="No"> No </option>
-                    </select>
-                </div>
-
-
-            <div class="form-group button-group">
-                <input class="boton-submit" type="submit" value="Enviar">
-                <input class="boton-reset" type="reset" value="Limpiar">
-            </div>
-        </form>
-    </div>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            document.querySelector('button[data-target="soporte-remoto"]').addEventListener('click', function() {
-                document.querySelector('.formulario').style.display = 'block';
-            });
-    
-            document.querySelector('button[data-target="soporte-domicilio"]').addEventListener('click', function() {
-                document.querySelector('.formulario').style.display = 'block';
-            });
-        });
-    </script>
-    
-    </body>
-
-<footer>
+    <footer>
         <p>Todos los derechos quedan reservados - New Tech.</p>
         <div class="redes">
             <a href="https://www.facebook.com" target="_blank"><i class='bx bxl-facebook'></i></a>
@@ -216,7 +118,6 @@
             <a href="https://www.twitter.com" target="_blank"><i class='bx bxl-twitter'></i></a>
             <a href="https://www.youtube.com" target="_blank"><i class='bx bxl-youtube'></i></a>    
         </div>
-        <a href="https://web.whatsapp.com/" class="btn-wsp" target="_blank">
-            <i class='bx bxl-whatsapp'></i></a>
-</footer>
+    </footer>
+</body>
 </html>
