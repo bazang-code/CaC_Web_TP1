@@ -22,3 +22,50 @@ body, header, main {
     align-items: center;
     padding: 15px;
 }
+
+#formulario_STR, #formulario_STD {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #a5c4bf;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-weight: bold;
+    color: #5e5858;
+}
+
+.form-group {
+    display: block;
+    margin-bottom: 20px;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #ffffff;
+    text-align: left;
+}
+
+
+.button-group [type="submit"]{
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.button-group [type="submit"]:hover {
+    background-color: #0056b3;
+}
