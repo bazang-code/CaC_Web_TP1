@@ -17,10 +17,23 @@ body, header, main {
 
 .botonera {
     display: flex;
-    gap: 10px;
+    gap: 350px;
     justify-content: center;
     align-items: center;
     padding: 15px;
+
+    border-radius: 10px;
+    background-color: #f2f2f2;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s,
+    transform 0.3s;
+}
+
+
+
+.botonera:hover { 
+    background-color: #e0e0e0; 
+    transform: scale(1.1); 
 }
 
 #formulario_STR, #formulario_STD {
@@ -108,21 +121,3 @@ body, header, main {
     }
 }
 
-.reseña_2 img {
-    margin-right: 100px;
-    margin-top: 5px;
-    margin-left: 50px;
-}
-
-.reseña_2 img {
-    transform: translateX(-100%);
-    transition: transform 1.5s;
-}
-
-.reseña_2 img.active {
-    transform: translateX(0);
-}
-.reseña_2 {
-    position: relative;
-    animation: slideIn 1s forwards;
-}
