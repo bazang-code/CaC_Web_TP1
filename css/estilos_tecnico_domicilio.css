@@ -83,3 +83,46 @@ body, header, main {
     margin-top: 5px;
     margin-left: 50px;
 }
+
+.reseña img {
+    transform: translateX(-100%);
+    transition: transform 1.5s;
+}
+
+.reseña img.active {
+    transform: translateX(0);
+}
+.reseña {
+    position: relative;
+    animation: slideIn 1s forwards;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.reseña_2 img {
+    margin-right: 100px;
+    margin-top: 5px;
+    margin-left: 50px;
+}
+
+.reseña_2 img {
+    transform: translateX(-100%);
+    transition: transform 1.5s;
+}
+
+.reseña_2 img.active {
+    transform: translateX(0);
+}
+.reseña_2 {
+    position: relative;
+    animation: slideIn 1s forwards;
+}

@@ -14,3 +14,8 @@ document.addEventListener("DOMContentLoaded", function () {
         formSTD.style.display = "block";
     });
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+    const imgResena = document.querySelector(".reseña img");
+    imgResena.classList.add("active");
+});
