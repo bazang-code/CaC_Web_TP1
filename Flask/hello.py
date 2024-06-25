@@ -12,5 +12,6 @@ def home():
 # es decir:
 #Python hello.py
 if __name__ == '__main__':
-    app.run(debug=True)class
+    app.run(debug=True)
+        
     
