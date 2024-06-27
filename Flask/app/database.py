@@ -47,7 +47,7 @@ def test_connection():
     cur.close() 
     conn.close()
 
-def create_table_tareas():
+def create_table_clientes():
     conn = psycopg2.connect(**DATABASE_CONFIG)
     cur = conn.cursor()
     cur.execute(
@@ -66,3 +66,6 @@ def create_table_tareas():
    
     cur.close()
     conn.close()
+
+
+    
