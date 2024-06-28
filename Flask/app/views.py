@@ -1,4 +1,8 @@
 from flask import jsonify, request
+from app.models import Clients
+
+from datetime import date
+ 
 
 def index():
     return jsonify(
@@ -7,90 +11,69 @@ def index():
         }
     )
 
+
 def get_pending_clients():
-    clients = [
-        {
-            'id':1,
-            'nombre':'Cliente 1 pending',
-            'descripcion':'Cliente 1 Desc',
-            'completada': False,
-            'activo': True,
-            'fecha_creacion': '2024-01-01'
-        },
-        {
-            'id':2,
-            'nombre':'Cliente 2',
-            'descripcion':'Cliente 2 Desc',
-            'completada': False,
-            'activo': True,
-            'fecha_creacion': '2024-01-01'
-        }
-    ]
-    return jsonify(clients)
+    clients = Clients.get_all_pending()
+    return jsonify([clients.serialize() for task in clients])
 
 def get_completed_clients():
-    clients = [
-        {
-            'id':1,
-            'nombre':'Cliente 1 completed',
-            'descripcion':'Cliente 1 Desc',
-            'completada': False,
-            'activo': True,
-            'fecha_creacion': '2024-01-01'
-        },
-        {
-            'id':2,
-            'nombre':'Cliente 2',
-            'descripcion':'Cliente 2 Desc',
-            'completada': False,
-            'activo': True,
-            'fecha_creacion': '2024-01-01'
-        }
-    ]
-    return jsonify(clients)
+    clients = Clients.get_all_completed()
+    return jsonify([clients.serialize() for clients in clients])
 
 def get_archived_clients():
-    clients = [
-        {
-            'id':1,
-            'nombre':'Cliente 1 archived',
-            'descripcion':'Cliente 1 Desc',
-            'completada': False,
-            'activo': True,
-            'fecha_creacion': '2024-01-01'
-        },
-        {
-            'id':2,
-            'nombre':'Cliente 2',
-            'descripcion':'Cliente 2 Desc',
-            'completada': False,
-            'activo': True,
-            'fecha_creacion': '2024-01-01'
-        }
-    ]
-    return jsonify(clients)
+    clients = Clients.get_all_archived()
+    return jsonify([clients.serialize() for clients in clients])
 
 def get_clients(clients_id):
- clients = {
- 'id':clients_id,
- }
- return jsonify(clients)
+    clients = Clients.get_by_id(clients_id)
+    if not clients:
+        return jsonify({'message': 'Clients not found'}), 404
+    return jsonify(clients.serialize())
 
 def create_clients():
-    #datos recibidos en formato json
     data = request.json
-    return jsonify({'message': 'Clients created successfully','data':data}), 201
+    new_clients = Clients(
+        nombre=data['nombre'],
+        descripcion=data['descripcion'],
+        fecha_creacion=date.today().strftime('%Y-%m-%d'),
+        completada=False,
+        activa=True
+    )
+    new_clients.save()
+    return jsonify({'message': 'Clients created successfully'}), 201
 
 def update_clients(clients_id):
-    #datos recibidos en formato json
+    clients = Clients.get_by_id(clients_id)
+    if not clients:
+        return jsonify({'message': 'Clients not found'}), 404
+   
     data = request.json
-    return jsonify({'message': 'Clients updated successfully','data':data,'id':clients_id})
+    clients.nombre = data['nombre']
+    clients.descripcion = data['descripcion']
+    clients.save()
+    return jsonify({'message': 'Clients updated successfully'})
 
 def archive_clients(clients_id):
-    return jsonify({'message': 'Clients archived successfully','id':clients_id})
+    clients = Clients.get_by_id(clients_id)
+    if not clients:
+        return jsonify({'message': 'Clients not found'}), 404
+   
+    clients.delete()
+    return jsonify({'message': 'Movie deleted successfully'})
+
+def __complete_clients(clients_id, status):
+    clients = Clients.get_by_id(clients_id)
+    if not clients:
+        return jsonify({'message': 'Clients not found'}), 404
+
+    clients.completada = status
+    clients.activa = True
+    clients.save()
+    return jsonify({'message': 'Clients updated successfully'})
 
 def set_complete_clients(clients_id):
-    return jsonify({'message': 'Clients updated successfully','id':clients_id})
+    return __complete_clients(clients_id, True)
 
 def reset_complete_clients(clients_id):
-    return jsonify({'message': 'Clients updated successfully','id':clients_id})
+    return __complete_clients(clients_id, False)
+

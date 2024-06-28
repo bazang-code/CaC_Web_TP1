@@ -1,9 +1,11 @@
 from flask import Flask
+from flask_cors import CORS
+
 from app.views import *
 from app.database import *
-# asterisco es traeme todo
 app = Flask(__name__)
 
+# asterisco es traeme todo
 # rutas de API-Rest
 app.route('/', methods=['GET'])(index)
 
@@ -21,11 +23,13 @@ app.route('/api/clients/archive/<int:clients_id>', methods=['DELETE'])(archive_c
 app.route('/api/clients/complete/set/<int:clients_id>', methods=['PUT'])(set_complete_clients)
 app.route('/api/clients/complete/reset/<int:clients_id>', methods=['PUT'])(reset_complete_clients)
 
+create_table_clientes()
 
 # Conexion a BDD
 init_app(app)
 
-create_table_clientes()
+# Cors
+CORS(app)
 
 if __name__ == '__main__':
     app.run(debug=True)
