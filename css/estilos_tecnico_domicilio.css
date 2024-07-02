@@ -31,10 +31,10 @@ body, header, main {
 
 
 
-.botonera:hover { 
+/* .botonera:hover { 
     background-color: #e0e0e0; 
     transform: scale(1.1); 
-}
+} */
 
 #formulario_STR, #formulario_STD {
     max-width: 600px;
