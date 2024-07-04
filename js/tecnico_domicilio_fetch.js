@@ -4,11 +4,11 @@ document.addEventListener("DOMContentLoaded", function () {
         event.preventDefault();  // Prevenir el envío del formulario por defecto
 
         const data_post = {
-            'nombre': document.querySelector("#nombre_STR").value,
-            'apellido': document.querySelector("#apellido_STR").value,
-            'email': document.querySelector("#email_STR").value,
-            'telefono': document.querySelector("#telefono_STR").value,
-            'descripcion_problema': document.querySelector("#problema_STR").value
+            'nombre': document.getElementById("nombre_STR").value,
+            'apellido': document.getElementById("apellido_STR").value,
+            'email': document.getElementById("email_STR").value,
+            'telefono': document.getElementById("telefono_STR").value,
+            'descripcion_problema': document.getElementById("problema_STR").value
         };
 
         // Imprimir los datos en la consola
