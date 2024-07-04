@@ -33,7 +33,6 @@
                 <li><a class="nav_actual">Servicio Técnico</a></li>
                 <!-- <li><a class="nav" href="./venta_accesorios.html">Venta de Accesorios</a></li> -->
                 <li><a class="nav" href="./contacto.html">Contacto</a></li>
-                <li><a class="nav" href="./Clientes.html">Clientes</a> </li>
                 <li><a class="nav" href="./nosotros.html">Nosotros</a></li>
             </ul>
         </nav>
@@ -69,8 +68,8 @@
             -->
         <div class="botonera">
             <button id="STR" class="btn btn-outline-primary btn-sm">SOPORTE TÉCNICO REMOTO</button>
-            <button id="STD" class="btn btn-outline-primary btn-sm">SOPORTE TÉCNICO A DOMICILIO</button>
-            <button id="SST" class="btn btn-outline-primary btn-sm">SOLICITUDE DE SOPORTE TÉCNICO</button>
+            <!-- <button id="STD" class="btn btn-outline-primary btn-sm">SOPORTE TÉCNICO A DOMICILIO</button> -->
+            <button id="SST" class="btn btn-outline-primary btn-sm">SOLICITUDES DE SOPORTE TÉCNICO</button>
         </div>
     
         <!-- Formulario para SOPORTE TÉCNICO REMOTO (STR) -->
@@ -78,26 +77,26 @@
             <fieldset>
                 <img src="../img/soporte_remoto_2.jpg" alt="Técnico a Domicilio" width="100">
                 <legend>SOLICITUD DE SOPORTE TÉCNICO REMOTO</legend>
-                    <form action="" method="POST" target="_blank">
+                    <form action="/submit_str" method="POST">
                         <div class="form-group">
                             <label for="nombre_STR">Nombre:</label>
-                            <input type="text" class="form-control" id="nombre_STR" placeholder="Ingrese su nombre">
+                            <input type="text" class="form-control" id="nombre_STR" name="nombre" placeholder="Ingrese su nombre">
                         </div>
                         <div class="form-group">
                             <label for="apellido_STR">Apellido:</label>
-                            <input type="text" class="form-control" id="apellido_STR" placeholder="Ingrese su apellido">
+                            <input type="text" class="form-control" id="apellido_STR" name="apellido" placeholder="Ingrese su apellido">
                         </div>
                         <div class="form-group">
                             <label for="email_STR">Email:</label>
-                            <input type="email" class="form-control" id="email_STR" placeholder="Ingrese su correo electrónico">
+                            <input type="email" class="form-control" id="email_STR" name="email" placeholder="Ingrese su correo electrónico">
                         </div>
                         <div class="form-group">
                             <label for="telefono_STR">Teléfono:</label>
-                            <input type="tel" class="form-control" id="telefono_STR" placeholder="Ingrese su teléfono">
+                            <input type="tel" class="form-control" id="telefono_STR" name="telefono" placeholder="Ingrese su teléfono">
                         </div>
                         <div class="form-group">
                             <label for="problema_STR">Descripción del problema:</label>
-                            <textarea class="form-control" id="problema_STR" rows="3" placeholder="Describa su problema aquí"></textarea>
+                            <textarea class="form-control" id="problema_STR" name="problema" rows="3" placeholder="Describa su problema aquí"></textarea>
                         </div>
                         <div class="form-group button-group">
                             <button type="submit" class="btn btn-outline-primary btn-sm">Enviar</button>
@@ -108,58 +107,58 @@
         
     
         <!-- Formulario para SOPORTE TÉCNICO A DOMICILIO (STD) -->
-        <div id="formulario_STD" style="display: none;">
+        <!-- <div id="formulario_STD" style="display: none;">
             <fieldset>
                 <img src="../img/tecnico_domicilio.png" alt="Técnico a Domicilio" width="100">
                 <legend>SOLICITUD DE SOPORTE TÉCNICO A DOMICILIO</legend>
     
-                    <form action="" method="POST" target="_blank">
+                    <form action="/submit_std" method="POST">
                         <div class="form-group">
                             <label for="nombre_STD">Nombre:</label>
-                            <input type="text" class="form-control" id="nombre_STD" placeholder="Ingrese su nombre">
+                            <input type="text" class="form-control" id="nombre_STD" name="nombre" placeholder="Ingrese su nombre">
                         </div>
                         <div class="form-group">
                             <label for="apellido_STD">Apellido:</label>
-                            <input type="text" class="form-control" id="apellido_STD" placeholder="Ingrese su apellido">
+                            <input type="text" class="form-control" id="apellido_STD" name="apellido" placeholder="Ingrese su apellido">
                         </div>
                         <div class="form-group">
                             <label for="email_STD">Email:</label>
-                            <input type="email" class="form-control" id="email_STD" placeholder="Ingrese su correo electrónico">
+                            <input type="email" class="form-control" id="email_STD" name="email" placeholder="Ingrese su correo electrónico">
                         </div>
                         <div class="form-group">
                             <label for="telefono_STD">Teléfono:</label>
-                            <input type="tel" class="form-control" id="telefono_STD" placeholder="Ingrese su teléfono">
+                            <input type="tel" class="form-control" id="telefono_STD" name="telefono" placeholder="Ingrese su teléfono">
                         </div>
                         <div class="form-group">
                             <label for="problema_STD">Descripción del problema:</label>
-                            <textarea class="form-control" id="problema_STD" rows="3" placeholder="Describa su problema aquí"></textarea>
+                            <textarea class="form-control" id="problema_STD" name="problema" rows="3" placeholder="Describa su problema aquí"></textarea>
                         </div>
                         <div class="form-group">
                             <label for="calle_STD">Calle:</label>
-                            <input type="text" class="form-control" id="calle_STD" placeholder="Ingrese el nombre de la calle">
+                            <input type="text" class="form-control" id="calle_STD" name="calle" placeholder="Ingrese el nombre de la calle">
                         </div>
                         <div class="form-group">
                             <label for="numero_STD">Número:</label>
-                            <input type="text" class="form-control" id="numero_STD" placeholder="Ingrese el número de la calle">
+                            <input type="text" class="form-control" id="numero_STD" name="numero" placeholder="Ingrese el número de la calle">
                         </div>
                         <div class="form-group">
                             <label for="piso_depto_STD">Piso y Depto:</label>
-                            <input type="text" class="form-control" id="piso_depto_STD" placeholder="Ingrese el piso y departamento">
+                            <input type="text" class="form-control" id="piso_depto_STD" name="piso_depto" placeholder="Ingrese el piso y departamento">
                         </div>
                         <div class="form-group">
                             <label for="localidad_STD">Localidad:</label>
-                            <input type="text" class="form-control" id="localidad_STD" placeholder="Ingrese la localidad">
+                            <input type="text" class="form-control" id="localidad_STD" name="localidad" placeholder="Ingrese la localidad">
                         </div>
                         <div class="form-group">
                             <label for="provincia_STD">Provincia:</label>
-                            <input type="text" class="form-control" id="provincia_STD" placeholder="Ingrese la provincia">
+                            <input type="text" class="form-control" id="provincia_STD" name="provincia" placeholder="Ingrese la provincia">
                         </div>
                         <div class="form-group button-group">
                             <button type="submit" class="btn btn-outline-primary btn-sm">Enviar</button>
                         </div>
                     </form>
             </fieldset>
-        </div>
+        </div> -->
         
         <script src="../js/tecnico_domicilio.js"></script>
     </main>
@@ -173,4 +172,4 @@
         </div>
     </footer>
 </body>
-</html>  
+</html>

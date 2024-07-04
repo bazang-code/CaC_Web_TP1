@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Éxito</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .success-message {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-size: 1.5em;
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <div class="success-message">
+        {{ get_flashed_messages()[0] }}
+    </div>
+    <script>
+        setTimeout(function() {
+            window.location.href = "./tecnico_domicilio.htm";
+        }, 3000);
+    </script>
+</body>
+</html>
