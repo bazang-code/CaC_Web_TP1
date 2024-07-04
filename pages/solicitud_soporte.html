@@ -20,7 +20,7 @@
      <link rel="stylesheet" href="../css/estilos_footer.css">
      <link rel="stylesheet" href="../css/estilos_nav.css">
      <link rel="stylesheet" href="../css/estilos.css">
-     <link rel="stylesheet" href="../css/estilos_tecnico_domicilio.css">
+     <link rel="stylesheet" href="../css/estilos_solicitud_soporte.css">
 </head>
 <body>
     <header>
@@ -52,7 +52,30 @@
         <div id="formulario_B2" style="display: none;">Formulario B2</div>
         <div id="formulario_B3" style="display: none;">Formulario B3</div>
         <div id="formulario_B4" style="display: none;">Formulario B4</div>
-    
+
+
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Fecha de Solicitud</th>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Email</th>
+                    <th>Teléfono</th>
+                    <th>Descripción del Problema</th>
+                    <th>Técnico Asignado</th>
+                    <th>Estado de Solicitud</th>
+                    <th>Fecha de Cierre</th>
+                    <th>Acciones</th> <!-- Nueva columna para acciones -->
+                </tr>
+            </thead>
+            <tbody id="tablaSolicitudes">
+                <!-- Aquí se inyectarán las filas -->
+            </tbody>
+        </table>
+
+
               
         <script src="../js/solicitud_soporte.js"></script>
     </main>

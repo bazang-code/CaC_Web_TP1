@@ -23,6 +23,28 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+///////AGREGADO PARA QUE RECARGUE LA PAGINA///////////////////
+// const formulario = document.getElementById("Formulario");
+//     formulario.addEventListener("submit", function (event) {
+//         event.preventDefault();
+
+//         const formData = new FormData(formulario);
+//         fetch('/api/submit_str', {
+//             method: 'POST',
+//             body: formData
+//         })
+//         .then(response => response.json())
+//         .then(data => {
+//             alert('Solicitud enviada con éxito');
+//             setTimeout(() => {
+//                 window.location.reload();
+//             }, 3000);
+//         })
+//         .catch(error => console.error('Error:', error));
+//     });
+//////////////////////////////////////////////////////////////
+
+
 document.addEventListener("DOMContentLoaded", () => {
     const imgResena = document.querySelector(".reseña img");
     imgResena.classList.add("active");
