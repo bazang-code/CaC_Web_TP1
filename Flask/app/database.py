@@ -37,35 +37,40 @@ def init_app(app):
     # Registrar 'close_db' para que se ejecute al final del contexto de la aplicación
     app.teardown_appcontext(close_db)
 
+# Función para chequear la coneccion con la  base de datos
 def test_connection():
     conn = psycopg2.connect(**DATABASE_CONFIG) 
-
+    
     cur = conn.cursor() 
-    
+
     conn.commit() 
-    
+
     cur.close() 
     conn.close()
 
-def create_table_clientes():
+
+def create_table_solicitud():
     conn = psycopg2.connect(**DATABASE_CONFIG)
     cur = conn.cursor()
     cur.execute(
         """
-        CREATE TABLE IF NOT EXISTS Tareas (
-            id SERIAL PRIMARY KEY,
-            nombre VARCHAR(50) NOT NULL,
-            descripcion VARCHAR(300) NOT NULL,
-            fecha_creacion DATE NOT NULL,
-            completada BOOLEAN NOT NULL,
-            activa BOOLEAN NOT NULL
+        CREATE TABLE IF NOT EXISTS SOLICITUDES (
+	        ID_SOLICITUD SERIAL PRIMARY KEY,
+            FECHA_SOLICITUD DATE NOT NULL DEFAULT CURRENT_DATE,
+            NOMBRE VARCHAR(30) NOT NULL,
+            APELLIDO VARCHAR(30) NOT NULL,
+            EMAIL VARCHAR(30) NOT NULL,
+            TELEFONO VARCHAR(20) NULL,
+            DESCRIPCION_PROBLEMA VARCHAR(255) NOT NULL,
+            TECNICO_ASIGNADO BOOLEAN NOT NULL DEFAULT FALSE,
+            ESTADO_SOLICITUD BOOLEAN NOT NULL DEFAULT FALSE,
+            FECHA_CIERRE DATE NULL
         );
         """
     )
     conn.commit()
-   
+
     cur.close()
     conn.close()
 
 
-    
