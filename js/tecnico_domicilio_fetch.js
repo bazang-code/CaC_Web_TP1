@@ -1,61 +1,30 @@
-document.addEventListener("DOMContentLoaded", function () {
-    const submitButton = document.querySelector("#submit_str");  // el ID del botón de envío del form
-    submitButton.addEventListener("click", (event) => {
-        event.preventDefault();  // Prevenir el envío del formulario por defecto
+let submitButton = document.querySelector("#formulario_STR #submit_str");
 
-        const data_post = {
-            'nombre': document.getElementById("nombre_STR").value,
-            'apellido': document.getElementById("apellido_STR").value,
-            'email': document.getElementById("email_STR").value,
-            'telefono': document.getElementById("telefono_STR").value,
-            'descripcion_problema': document.getElementById("problema_STR").value
-        };
+submitButton.addEventListener("click", ()=>{  
+    let data_post = {
+        'nombre': document.querySelector("#formulario_STR #nombre_STR").value,
+        'apellido': document.querySelector("#formulario_STR #apellido_STR").value,
+        'email': document.querySelector("#formulario_STR #email_STR").value,
+        'telefono': document.querySelector("#formulario_STR #telefono_STR").value,
+        'descripcion_problema': document.querySelector("#formulario_STR #problema_STR").value
+    }
 
-        // Imprimir los datos en la consola
-        console.log(data_post);
-
-        fetch("http://localhost:5000/api/submit_str", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify(data_post)
-        })
-        .then(response => response.json())
-        .then(data => {
-            alert('Solicitud enviada con éxito');
+    // Imprimir los datos en la consola
+    console.log(data_post);
+        
+    fetchData(
+        "http://localhost:5000/api/solicitud/create/",
+        "POST",
+        (data) => { 
+            // document.querySelector("#formulario_STR").reset();
+            // window.location.replace("./tecnico_domicilio.html");
+            console.log("Respuesta de la API:", data);
+            alert('La solicitud fue enviada con éxito');
             setTimeout(() => {
-                window.location.reload();
+                window.location.href = "./tecnico_domicilio.html";
             }, 3000);
-        })
-        .catch(error => console.error("Ocurrió un error!", error));
-        // fetchData(
-        //     "http://localhost:5000/api/submit_str",  // Asegúrate de que esta ruta sea correcta
-        //     "POST",
-        //     (data) => {
-        //         alert('Solicitud enviada con éxito');
-        //         setTimeout(() => {
-        //             window.location.reload();  // Recargar la página después de 3 segundos
-        //         }, 3000);
-        //     },
-        //     data_post
-        // );
-    });
-});
-
-function fetchData(url, method, callback, data = null) {
-    const options = {
-        method: method,
-        headers: {
-            'Content-Type': 'application/json',
         },
-        body: data ? JSON.stringify(data) : null,
-    };
-
-    fetch(url, options)
-    .then(response => response.json())
-    .then(data => {
-        callback(data);
-    })
-    .catch(error => console.log("Ocurrió un error! " + error));
+        data_post
+    );
 }
+);

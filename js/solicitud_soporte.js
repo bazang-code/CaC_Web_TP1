@@ -14,8 +14,8 @@ document.addEventListener("DOMContentLoaded", function () {
                     <td>${solicitud.email}</td>
                     <td>${solicitud.telelono}</td>
                     <td>${solicitud.descripcion_problema}</td>
-                    <td>${solicitud.estado_solicitud ? 'Resuelto' : 'Pendiente'}</td>
                     <td>${solicitud.tecnico_asignado ? 'Asignado' : 'No asignado'}</td>
+                    <td>${solicitud.estado_solicitud ? 'Resuelto' : 'Pendiente'}</td>
                     <td>${solicitud.fecha_cierre || 'N/A'}</td>
                     <td>
                         <button class="btn btn-primary btn-sm" onclick="asignarTecnico(${solicitud.id_solicitud})">Asignar Técnico</button>
