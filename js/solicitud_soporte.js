@@ -18,9 +18,15 @@ document.addEventListener("DOMContentLoaded", function () {
                     <td>${solicitud.estado_solicitud ? 'Resuelto' : 'Pendiente'}</td>
                     <td>${solicitud.fecha_cierre || 'N/A'}</td>
                     <td>
-                        <button class="btn btn-primary btn-sm" onclick="asignarTecnico(${solicitud.id_solicitud})">Asignar Técnico</button>
-                        <button class="btn btn-success btn-sm" onclick="marcarResuelto(${solicitud.id_solicitud})">Resuelto</button>
-                        <button class="btn btn-danger btn-sm" onclick="cancelarSolicitud(${solicitud.id_solicitud})">Cancelar</button>
+                        <button class="btn btn-primary btn-sm" onclick="asignarTecnico(${solicitud.id_solicitud})" data-toggle="tooltip" title="Asignar Técnico">
+                            <i class='bx bxs-user-voice'></i>
+                        </button>
+                        <button class="btn btn-success btn-sm" onclick="marcarResuelto(${solicitud.id_solicitud})" data-toggle="tooltip" title="Resuelto">
+                            <i class='bx bxs-check-circle'></i>
+                        </button>
+                        <button class="btn btn-danger btn-sm" onclick="cancelarSolicitud(${solicitud.id_solicitud})" data-toggle="tooltip" title="Cancelar">
+                            <i class='bx bxs-x-circle'></i>
+                        </button>
                     </td>
                 `;
                 tablaSolicitudes.appendChild(row);

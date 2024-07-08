@@ -19,6 +19,22 @@ table  {
     width: 100%;
 }
 
+/* Personaliza los botones */
+.btn .btn-text {
+    display: none;
+}
+
+/* Mostrar el texto del botón al pasar el mouse */
+.btn:hover .btn-text {
+    /* display: inline; */
+    margin-left: 5px; 
+}
+
+/* Ajustar el icono para mantener la alineación */
+.btn i {
+    vertical-align: middle;
+}
+
 .botonera {
     display: flex;
     flex-wrap: wrap;
