@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", function () {
-    // fetch('/api/solicitud/all/api/solicitud/all')
     fetch('http://localhost:5000/api/solicitud/all')
         .then(response => response.json())
         .then(data => {
@@ -18,13 +17,13 @@ document.addEventListener("DOMContentLoaded", function () {
                     <td>${solicitud.estado_solicitud ? 'Resuelto' : 'Pendiente'}</td>
                     <td>${solicitud.fecha_cierre || 'N/A'}</td>
                     <td>
-                        <button class="btn btn-primary btn-sm" onclick="asignarTecnico(${solicitud.id_solicitud})" data-toggle="tooltip" title="Asignar Técnico">
+                        <button id="asignarTecnico" class="btn btn-primary btn-sm" onclick="asignarTecnico(${solicitud.id_solicitud})" data-toggle="tooltip" title="Asignar Técnico">
                             <i class='bx bxs-user-voice'></i>
                         </button>
-                        <button class="btn btn-success btn-sm" onclick="marcarResuelto(${solicitud.id_solicitud})" data-toggle="tooltip" title="Resuelto">
+                        <button id="marcarResuelto" class="btn btn-success btn-sm" onclick="marcarResuelto(${solicitud.id_solicitud})" data-toggle="tooltip" title="Resuelto">
                             <i class='bx bxs-check-circle'></i>
                         </button>
-                        <button class="btn btn-danger btn-sm" onclick="cancelarSolicitud(${solicitud.id_solicitud})" data-toggle="tooltip" title="Cancelar">
+                        <button id="cancelarSolicitud" class="btn btn-danger btn-sm" onclick="cancelarSolicitud(${solicitud.id_solicitud})" data-toggle="tooltip" title="Cancelar">
                             <i class='bx bxs-x-circle'></i>
                         </button>
                     </td>
@@ -36,7 +35,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 function asignarTecnico(id) {
-    // Lógica para asignar técnico
+    // Lógica para asignar un tecnico
     alert(`Asignar técnico a la solicitud ${id}`);
 }
 
@@ -50,45 +49,169 @@ function cancelarSolicitud(id) {
     alert(`Cancelar la solicitud ${id}`);
 }
 
-const btn1 = document.getElementById("B1");
-const btn2 = document.getElementById("B2");
-const btn3 = document.getElementById("B3");
-const btn4 = document.getElementById("B4");
+const btn1 = document.getElementById("VerSolicitados");
+const btn2 = document.getElementById("VerAsignados");
+const btn3 = document.getElementById("VerResueltos");
+const btn4 = document.getElementById("VerCancelados");
 const form1 = document.getElementById("formulario_B1");
 const form2 = document.getElementById("formulario_B2");
 const form3 = document.getElementById("formulario_B3");
 const form4 = document.getElementById("formulario_B4");
 
-btn1.addEventListener("click", function () {
+VerSolicitados.addEventListener("click", function () {
     alert("Botón SOLICITADOS presionado");
-    form1.style.display = "block";
-    form2.style.display = "none";
-    form3.style.display = "none";
-    form4.style.display = "none";
+    document.addEventListener("DOMContentLoaded", function () {
+        fetch('http://localhost:5000/api/solicitud/pending')
+            .then(response => response.json())
+            .then(data => {
+                const tablaSolicitudes = document.getElementById('tablaSolicitudes');
+                data.forEach(solicitud => {
+                    const row = document.createElement('tr');
+                    row.innerHTML = `
+                        <td>${solicitud.id_solicitud}</td>
+                        <td>${solicitud.fecha_solicitud}</td>
+                        <td>${solicitud.nombre}</td>
+                        <td>${solicitud.apellido}</td>
+                        <td>${solicitud.email}</td>
+                        <td>${solicitud.telelono}</td>
+                        <td>${solicitud.descripcion_problema}</td>
+                        <td>${solicitud.tecnico_asignado ? 'Asignado' : 'No asignado'}</td>
+                        <td>${solicitud.estado_solicitud ? 'Resuelto' : 'Pendiente'}</td>
+                        <td>${solicitud.fecha_cierre || 'N/A'}</td>
+                        <td>
+                            <button id="asignarTecnico" class="btn btn-primary btn-sm" onclick="asignarTecnico(${solicitud.id_solicitud})" data-toggle="tooltip" title="Asignar Técnico">
+                                <i class='bx bxs-user-voice'></i>
+                            </button>
+                            <button id="marcarResuelto" class="btn btn-success btn-sm" onclick="marcarResuelto(${solicitud.id_solicitud})" data-toggle="tooltip" title="Resuelto">
+                                <i class='bx bxs-check-circle'></i>
+                            </button>
+                            <button id="cancelarSolicitud" class="btn btn-danger btn-sm" onclick="cancelarSolicitud(${solicitud.id_solicitud})" data-toggle="tooltip" title="Cancelar">
+                                <i class='bx bxs-x-circle'></i>
+                            </button>
+                        </td>
+                    `;
+                    tablaSolicitudes.appendChild(row);
+                });
+            })
+            .catch(error => console.error('Error fetching data:', error));
+    });
 });
 
-btn2.addEventListener("click", function () {
+VerAsignados.addEventListener("click", function () {
     alert("Botón ASIGNADOS presionado");
-    form1.style.display = "none";
-    form2.style.display = "block";
-    form3.style.display = "none";
-    form4.style.display = "none";
+    document.addEventListener("DOMContentLoaded", function () {
+        fetch('http://localhost:5000/api/solicitud/assigned')
+            .then(response => response.json())
+            .then(data => {
+                const tablaSolicitudes = document.getElementById('tablaSolicitudes');
+                data.forEach(solicitud => {
+                    const row = document.createElement('tr');
+                    row.innerHTML = `
+                        <td>${solicitud.id_solicitud}</td>
+                        <td>${solicitud.fecha_solicitud}</td>
+                        <td>${solicitud.nombre}</td>
+                        <td>${solicitud.apellido}</td>
+                        <td>${solicitud.email}</td>
+                        <td>${solicitud.telelono}</td>
+                        <td>${solicitud.descripcion_problema}</td>
+                        <td>${solicitud.tecnico_asignado ? 'Asignado' : 'No asignado'}</td>
+                        <td>${solicitud.estado_solicitud ? 'Resuelto' : 'Pendiente'}</td>
+                        <td>${solicitud.fecha_cierre || 'N/A'}</td>
+                        <td>
+                            <button id="asignarTecnico" class="btn btn-primary btn-sm" onclick="asignarTecnico(${solicitud.id_solicitud})" data-toggle="tooltip" title="Asignar Técnico">
+                                <i class='bx bxs-user-voice'></i>
+                            </button>
+                            <button id="marcarResuelto" class="btn btn-success btn-sm" onclick="marcarResuelto(${solicitud.id_solicitud})" data-toggle="tooltip" title="Resuelto">
+                                <i class='bx bxs-check-circle'></i>
+                            </button>
+                            <button id="cancelarSolicitud" class="btn btn-danger btn-sm" onclick="cancelarSolicitud(${solicitud.id_solicitud})" data-toggle="tooltip" title="Cancelar">
+                                <i class='bx bxs-x-circle'></i>
+                            </button>
+                        </td>
+                    `;
+                    tablaSolicitudes.appendChild(row);
+                });
+            })
+            .catch(error => console.error('Error fetching data:', error));
+    });
 });
 
-btn3.addEventListener("click", function () {
+VerResueltos.addEventListener("click", function () {
     alert("Botón RESUELTOS presionado");
-    form1.style.display = "none";
-    form2.style.display = "none";
-    form3.style.display = "block";
-    form4.style.display = "none";
+    document.addEventListener("DOMContentLoaded", function () {
+        fetch('http://localhost:5000/api/solicitud/completed')
+            .then(response => response.json())
+            .then(data => {
+                const tablaSolicitudes = document.getElementById('tablaSolicitudes');
+                data.forEach(solicitud => {
+                    const row = document.createElement('tr');
+                    row.innerHTML = `
+                        <td>${solicitud.id_solicitud}</td>
+                        <td>${solicitud.fecha_solicitud}</td>
+                        <td>${solicitud.nombre}</td>
+                        <td>${solicitud.apellido}</td>
+                        <td>${solicitud.email}</td>
+                        <td>${solicitud.telelono}</td>
+                        <td>${solicitud.descripcion_problema}</td>
+                        <td>${solicitud.tecnico_asignado ? 'Asignado' : 'No asignado'}</td>
+                        <td>${solicitud.estado_solicitud ? 'Resuelto' : 'Pendiente'}</td>
+                        <td>${solicitud.fecha_cierre || 'N/A'}</td>
+                        <td>
+                            <button id="asignarTecnico" class="btn btn-primary btn-sm" onclick="asignarTecnico(${solicitud.id_solicitud})" data-toggle="tooltip" title="Asignar Técnico">
+                                <i class='bx bxs-user-voice'></i>
+                            </button>
+                            <button id="marcarResuelto" class="btn btn-success btn-sm" onclick="marcarResuelto(${solicitud.id_solicitud})" data-toggle="tooltip" title="Resuelto">
+                                <i class='bx bxs-check-circle'></i>
+                            </button>
+                            <button id="cancelarSolicitud" class="btn btn-danger btn-sm" onclick="cancelarSolicitud(${solicitud.id_solicitud})" data-toggle="tooltip" title="Cancelar">
+                                <i class='bx bxs-x-circle'></i>
+                            </button>
+                        </td>
+                    `;
+                    tablaSolicitudes.appendChild(row);
+                });
+            })
+            .catch(error => console.error('Error fetching data:', error));
+    });
 });
 
-btn4.addEventListener("click", function () {
+VerCancelados.addEventListener("click", function () {
     alert("Botón CANCELADOS presionado");
-    form1.style.display = "none";
-    form2.style.display = "none";
-    form3.style.display = "none";
-    form4.style.display = "block";
+    document.addEventListener("DOMContentLoaded", function () {
+        fetch('http://localhost:5000/api/solicitud/canceled')
+            .then(response => response.json())
+            .then(data => {
+                const tablaSolicitudes = document.getElementById('tablaSolicitudes');
+                data.forEach(solicitud => {
+                    const row = document.createElement('tr');
+                    row.innerHTML = `
+                        <td>${solicitud.id_solicitud}</td>
+                        <td>${solicitud.fecha_solicitud}</td>
+                        <td>${solicitud.nombre}</td>
+                        <td>${solicitud.apellido}</td>
+                        <td>${solicitud.email}</td>
+                        <td>${solicitud.telelono}</td>
+                        <td>${solicitud.descripcion_problema}</td>
+                        <td>${solicitud.tecnico_asignado ? 'Asignado' : 'No asignado'}</td>
+                        <td>${solicitud.estado_solicitud ? 'Resuelto' : 'Pendiente'}</td>
+                        <td>${solicitud.fecha_cierre || 'N/A'}</td>
+                        <td>
+                            <button id="asignarTecnico" class="btn btn-primary btn-sm" onclick="asignarTecnico(${solicitud.id_solicitud})" data-toggle="tooltip" title="Asignar Técnico">
+                                <i class='bx bxs-user-voice'></i>
+                            </button>
+                            <button id="marcarResuelto" class="btn btn-success btn-sm" onclick="marcarResuelto(${solicitud.id_solicitud})" data-toggle="tooltip" title="Resuelto">
+                                <i class='bx bxs-check-circle'></i>
+                            </button>
+                            <button id="cancelarSolicitud" class="btn btn-danger btn-sm" onclick="cancelarSolicitud(${solicitud.id_solicitud})" data-toggle="tooltip" title="Cancelar">
+                                <i class='bx bxs-x-circle'></i>
+                            </button>
+                        </td>
+                    `;
+                    tablaSolicitudes.appendChild(row);
+                });
+            })
+            .catch(error => console.error('Error fetching data:', error));
+    });
 });
 
 
