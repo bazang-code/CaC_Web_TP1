@@ -15,9 +15,7 @@ submitButton.addEventListener("click", ()=>{
     fetchData(
         "http://localhost:5000/api/solicitud/create/",
         "POST",
-        (data) => { 
-            // document.querySelector("#formulario_STR").reset();
-            // window.location.replace("./tecnico_domicilio.html");
+        (data) => {
             console.log("Respuesta de la API:", data);
             alert('La solicitud fue enviada con éxito');
             setTimeout(() => {
