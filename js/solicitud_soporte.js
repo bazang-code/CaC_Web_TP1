@@ -38,9 +38,37 @@ function fetchData(url) {
             tablaSolicitudes.innerHTML = ''; // Limpiar la tabla antes de agregar nuevas filas
             data.forEach(solicitud => {
                 const row = document.createElement('tr');
+
+                // Formatear la fecha de solicitud
+                const fechaSolicitud = new Date(solicitud.fecha_solicitud).toLocaleDateString();
+                // Formatear la fecha de cierre
+                const fechaCierre = solicitud.fecha_cierre ? new Date(solicitud.fecha_cierre).toLocaleDateString() : 'N/A';
+
+                 // Condiciones para habilitar/deshabilitar botones
+                 let disableAsignar = '';
+                 let disableResuelto = '';
+                 let disableCancelar = '';
+ 
+                 if (!solicitud.tecnico_asignado && !solicitud.estado_solicitud && !solicitud.fecha_cierre) {
+                     // Solo los botones de técnico y cancelar deben estar habilitados
+                     disableResuelto = 'disabled';
+                 } else if (solicitud.tecnico_asignado && !solicitud.estado_solicitud && !solicitud.fecha_cierre) {
+                     // Solo los botones de técnico y estado solicitud deben estar habilitados
+                     disableCancelar = 'disabled';
+                 } else if (solicitud.tecnico_asignado && solicitud.estado_solicitud && solicitud.fecha_cierre) {
+                     // Ningún botón debe estar habilitado
+                     disableAsignar = 'disabled';
+                     disableResuelto = 'disabled';
+                     disableCancelar = 'disabled';
+                 } else if (!solicitud.tecnico_asignado && !solicitud.estado_solicitud && solicitud.fecha_cierre) {
+                     // Solo el botón de cancelar debe estar habilitado
+                     disableAsignar = 'disabled';
+                     disableResuelto = 'disabled';
+                 }
+
                 row.innerHTML = `
                     <td>${solicitud.id_solicitud}</td>
-                    <td>${solicitud.fecha_solicitud}</td>
+                    <td>${fechaSolicitud}</td>
                     <td>${solicitud.nombre}</td>
                     <td>${solicitud.apellido}</td>
                     <td>${solicitud.email}</td>
@@ -48,15 +76,15 @@ function fetchData(url) {
                     <td>${solicitud.descripcion_problema}</td>
                     <td>${solicitud.tecnico_asignado ? 'Asignado' : 'No asignado'}</td>
                     <td>${solicitud.estado_solicitud ? 'Resuelto' : 'Pendiente'}</td>
-                    <td>${solicitud.fecha_cierre || 'N/A'}</td>
+                    <td>${fechaCierre || 'N/A'}</td>
                     <td>
-                        <button class="btn btn-primary btn-sm" onclick="asignarTecnico(${solicitud.id_solicitud})" data-toggle="tooltip" title="Asignar Técnico">
+                        <button class="btn btn-primary btn-sm" onclick="asignarTecnico(${solicitud.id_solicitud})" data-toggle="tooltip" title="Asignar Técnico" ${disableAsignar}>
                             <i class='bx bxs-user-voice'></i>
                         </button>
-                        <button class="btn btn-success btn-sm" onclick="marcarResuelto(${solicitud.id_solicitud})" data-toggle="tooltip" title="Resuelto">
+                        <button class="btn btn-success btn-sm" onclick="marcarResuelto(${solicitud.id_solicitud})" data-toggle="tooltip" title="Resuelto" ${disableResuelto}>
                             <i class='bx bxs-check-circle'></i>
                         </button>
-                        <button class="btn btn-danger btn-sm" onclick="cancelarSolicitud(${solicitud.id_solicitud})" data-toggle="tooltip" title="Cancelar">
+                        <button class="btn btn-danger btn-sm" onclick="cancelarSolicitud(${solicitud.id_solicitud})" data-toggle="tooltip" title="Cancelar" ${disableCancelar}>
                             <i class='bx bxs-x-circle'></i>
                         </button>
                     </td>
