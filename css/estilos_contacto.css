@@ -1,0 +1,198 @@
+.btn-wsp {
+    position: fixed;
+    width: 55px;
+    height: 55px;
+    line-height: 55px;
+    bottom: 50px;
+    right: 30px;
+    background: #0df053;
+    color: #fff;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.3);
+    z-index: 100;
+}
+
+.btn-wsp:hover {
+    text-decoration: none;
+    color: #0df053;
+    background: #fff;
+}
+
+/****************************************/
+
+#Categorias .contenido{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    font-style: normal;    
+    padding: 15px;
+    border-radius: 10dvh;
+    
+}
+#Categorias .contenido article {
+    width: 200px;
+    background-color: #0df0dd;
+    padding: 30px;
+    text-align:center; 
+    background: #eee;
+    border-radius: 35px;
+    margin-right: 5px;
+    flex-grow: 1;
+    align-items: center;
+    border: 2px solid #807d77; 
+       
+}
+
+.Empresa {
+    font-size: xx-large;
+}
+/*
+.contenido:hover {
+    text-decoration: none;
+    color: #080808;
+    background: #f6eddc;
+}
+/******************************************/
+
+.contenedor_form_mapa {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 20px;
+    gap: 20px;
+}
+
+.contenedor_form, .contenedor_mapa {
+    background-color: #e3e5d7;
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.contenedor_form, .contenedor_mapa {
+    flex-basis: 50%; /* reparto el espacion a la mitad*/
+}
+
+.contenedor_mapa{
+    position: relative;
+    overflow: hidden;
+    /* padding-top: 30%;  */
+}
+
+.contenedor_mapa iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.contenedor_telefono {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    /* flex-direction: row; */
+    gap: 1rem; /* Espacio entre las opciones */
+}
+
+.telefono_opcion {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.telefono_opcion:nth-child(1), .telefono_opcion:nth-child(2) {
+    flex-basis: 10%;
+}
+
+.telefono_opcion:nth-child(3) {
+    flex-basis: 80%;
+}
+
+.telefono_opcion label {
+    margin-bottom: 0.5rem; /* Espacio entre el label y el input */
+}
+
+.contenedor_mapa p{
+    position: relative;
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+    padding: 10px;
+}
+
+fieldset {
+    border: 2px solid #f6eddc;
+    border-radius: 5px;
+    padding: 10px;
+    /* width: 40%; */
+}
+
+legend {
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+/* Estilos de los elementos del formulario */
+.form-group {
+    margin-bottom: 10px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    /* font-size: 18px; */
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 8px;
+    border-radius: 5px;
+    border: none;
+    color: black;
+    cursor: pointer;
+}
+
+.boton-submit, .boton-reset {
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: none;
+    background-color: #a5c8ca;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.boton-submit:hover, .boton-reset:hover {
+    background-color: #586875;
+}
+
+/* Para dejar los botones en una línea */
+.form-group.button-group {
+    display: flex;
+    justify-content: center; /* botones centrados */
+    gap: 10px; /* Espacio entre los botones */
+}
+
+.form-group.button-group input {
+    flex: none; /* Evita que los botones se estiren */
+    width: auto; /* Asegura que los botones se ajusten a su contenido */
+}
+
+p1 {
+    font-size: xx-large;
+    color: rgb(206, 42, 56);
+    
+}
+
+p2 {
+    margin-left: 5%;
+}
+
+#Categorias h3 {
+    margin-left: 5%;
+    font-size: xx-large;
+    text-decoration:solid;
+}

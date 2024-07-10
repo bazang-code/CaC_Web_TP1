@@ -1,0 +1,187 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body, header, main {
+    background-color: #bdd6d2;
+    margin: 1rem;
+    min-width: 800px;
+    /* border: 3px green solid; */
+}
+
+table  {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+/* Personaliza los botones */
+.btn .btn-text {
+    display: none;
+}
+
+/* Mostrar el texto del botón al pasar el mouse */
+.btn:hover .btn-text {
+    /* display: inline; */
+    margin-left: 5px; 
+}
+
+/* Ajustar el icono para mantener la alineación */
+.btn i {
+    vertical-align: middle;
+}
+
+.botonera {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    background-color: #f2f2f2;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.botonera button {
+    flex: 1 1 auto;
+    min-width: 120px;
+    margin: 5px;
+    font-size: 16px;
+}
+
+
+.form-group {
+    display: block;
+    margin-bottom: 20px;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #ffffff;
+    text-align: left;
+}
+
+
+.button-group [type="submit"]{
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.button-group [type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+@media only screen and (max-width: 600px) {
+    /* Estilos para pantallas con ancho máximo de 600px */
+    body, header, main {
+        margin: 0.5rem;
+    }
+
+    .botonera button {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    table {
+        font-size: 12px;
+    }
+
+    th, td {
+        padding: 5px;
+    }
+
+    thead {
+        display: none;
+    }
+
+    tbody, tr, td {
+        display: block;
+        width: 100%;
+    }
+
+    tr {
+        margin-bottom: 10px;
+        border-bottom: 1px solid #ccc;
+    }
+
+    td {
+        text-align: right;
+        padding-left: 50%;
+        position: relative;
+    }
+
+    td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 0;
+        width: 50%;
+        padding-left: 10px;
+        font-weight: bold;
+        text-align: left;
+    }
+}
+
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+    /* Estilos para pantallas con ancho entre 601px y 1024px */
+    .botonera button {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    table {
+        font-size: 14px;
+    }
+
+    th, td {
+        padding: 8px;
+    }
+}
+
+@media only screen and (min-width: 1025px) {
+    /* Estilos para pantallas con ancho mayor a 1025px */
+    .botonera button {
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    table {
+        font-size: 16px;
+    }
+
+    th, td {
+        padding: 10px;
+    }
+}

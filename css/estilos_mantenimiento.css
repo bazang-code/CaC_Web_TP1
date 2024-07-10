@@ -1,0 +1,41 @@
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.alternating-content {
+    display: flex;
+    align-items: center;
+    gap: 2rem; 
+}
+
+.alternating-content.reverse {
+    flex-direction: row-reverse;
+}
+
+.alternating-content img {
+    width: 50%;
+    object-fit: cover;
+}
+
+.alternating-content h3 {
+    text-align: center;
+    flex: 1;
+}
+
+.alternating-content p {
+    flex: 1;
+    text-align: left;
+}
+
+@media (max-width: 768px) {
+    .alternating-content,
+    .alternating-content.reverse {
+        flex-direction: column;
+    }
+
+    .alternating-content img {
+        width: 100%;
+    }
+}
