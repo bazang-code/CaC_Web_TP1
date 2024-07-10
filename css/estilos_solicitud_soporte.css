@@ -11,12 +11,13 @@ html {
 body, header, main {
     background-color: #bdd6d2;
     margin: 1rem;
-    min-width: 800px;
+    /* min-width: 800px; */
     /* border: 3px green solid; */
 }
 
 table  {
     width: 100%;
+    border-collapse: collapse;
 }
 
 /* Personaliza los botones */
@@ -105,12 +106,82 @@ table  {
 }
 @media only screen and (max-width: 600px) {
     /* Estilos para pantallas con ancho máximo de 600px */
+    body, header, main {
+        margin: 0.5rem;
+    }
+
+    .botonera button {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    table {
+        font-size: 12px;
+    }
+
+    th, td {
+        padding: 5px;
+    }
+
+    thead {
+        display: none;
+    }
+
+    tbody, tr, td {
+        display: block;
+        width: 100%;
+    }
+
+    tr {
+        margin-bottom: 10px;
+        border-bottom: 1px solid #ccc;
+    }
+
+    td {
+        text-align: right;
+        padding-left: 50%;
+        position: relative;
+    }
+
+    td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 0;
+        width: 50%;
+        padding-left: 10px;
+        font-weight: bold;
+        text-align: left;
+    }
 }
 
 @media only screen and (min-width: 601px) and (max-width: 1024px) {
     /* Estilos para pantallas con ancho entre 601px y 1024px */
+    .botonera button {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    table {
+        font-size: 14px;
+    }
+
+    th, td {
+        padding: 8px;
+    }
 }
 
 @media only screen and (min-width: 1025px) {
     /* Estilos para pantallas con ancho mayor a 1025px */
+    .botonera button {
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    table {
+        font-size: 16px;
+    }
+
+    th, td {
+        padding: 10px;
+    }
 }

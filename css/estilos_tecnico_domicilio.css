@@ -120,14 +120,28 @@ body, header, main {
         transform: translateX(0);
     }
 }
-@media only screen and (max-width: 600px) {
-    /* Estilos para pantallas con ancho máximo de 600px */
-}
+
 
 @media only screen and (min-width: 601px) and (max-width: 1024px) {
     /* Estilos para pantallas con ancho entre 601px y 1024px */
+    .botonera button {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .form-group {
+        font-size: 14px;
+    }
 }
 
 @media only screen and (min-width: 1025px) {
     /* Estilos para pantallas con ancho mayor a 1025px */
+    .botonera button {
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    .form-group {
+        font-size: 14px;
+    }
 }
